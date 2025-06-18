@@ -1,2 +1,2 @@
-# housing-payment-model.github.io-
+# housing-payment-model.github.io
 Clarity Housing Payment Model
