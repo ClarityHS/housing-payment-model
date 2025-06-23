@@ -1,1 +1,960 @@
-OWL file coming soon
+@prefix : <urn:bitfocus:clarity:governance-model#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hmis: <urn:hud:hmis:owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix clarity: <urn:bitfocus:clarity:governance-model#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix communitysolutions: <urn:cs:clarity:governance-model#> .
+@base <urn:bitfocus:clarity:governance-model#> .
+
+<urn:bitfocus:clarity:governance-model#> rdf:type owl:Ontology ;
+                                          owl:versionIRI clarity:v1.0.0 ;
+                                          dc:creator "O'Sullivan, Jim ; Bianchi, Lauren ; Warren, John ; Jahn, Eric"@en ;
+                                          dc:language "en-US" ;
+                                          dc:title "Bitfocus Clarity Housing Payment Model" ;
+                                          owl:versionInfo "v1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/language
+dc:language rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+dcterms:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#domain
+rdfs:domain rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+###  urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus
+clarity:InventoryRecordsCalculationStatus rdf:type owl:AnnotationProperty ;
+                                          rdfs:domain clarity:InventoryRecords .
+
+
+###  urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType
+clarity:ManualInventoryRefBedType rdf:type owl:AnnotationProperty ;
+                                  rdfs:domain clarity:ManualInventory .
+
+
+###  urn:bitfocus:clarity:governance-model#OutreachEvents
+clarity:OutreachEvents rdf:type owl:AnnotationProperty ;
+                       rdfs:domain clarity:OutreachSettingEvents .
+
+
+###  urn:bitfocus:clarity:governance-model#classification
+clarity:classification rdf:type owl:AnnotationProperty .
+
+
+###  urn:bitfocus:clarity:governance-model#hmisElementName
+clarity:hmisElementName rdf:type owl:AnnotationProperty .
+
+
+###  urn:bitfocus:clarity:governance-model#isPartOfScreen
+clarity:isPartOfScreen rdf:type owl:AnnotationProperty .
+
+
+###  urn:bitfocus:clarity:governance-model#looker
+clarity:looker rdf:type owl:AnnotationProperty .
+
+
+###  urn:bitfocus:clarity:governance-model#modelSet
+clarity:modelSet rdf:type owl:AnnotationProperty .
+
+
+###  urn:bitfocus:clarity:governance-model#sql
+clarity:sql rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#boolean
+xsd:boolean rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#time
+xsd:time rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  urn:bitfocus:clarity:governance-model#healthChronicToDisability
+clarity:healthChronicToDisability rdf:type owl:ObjectProperty ;
+                                  rdfs:domain clarity:Disability ;
+                                  rdfs:range clarity:HealthChronic ;
+                                  clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404
+clarity:benefitsMedicaidToHealthInsurance404 rdf:type owl:ObjectProperty ;
+                                             rdfs:domain clarity:HealthInsurance404 ;
+                                             rdfs:range clarity:BenefitsMedicaid ;
+                                             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#clientHasBiologicalSex
+clarity:clientHasBiologicalSex rdf:type owl:ObjectProperty ;
+                               rdfs:domain clarity:Client ;
+                               rdfs:range clarity:Sex ;
+                               clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#clientHasForm
+clarity:clientHasForm rdf:type owl:ObjectProperty ;
+                       rdfs:domain clarity:Client ;
+                       rdfs:range clarity:Form ;
+                       clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#clientHasGender
+clarity:clientHasGender rdf:type owl:ObjectProperty ;
+                        rdfs:domain clarity:Client ;
+                        rdfs:range clarity:Gender ;
+                        clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal
+clarity:enrollmentAchievedGoal rdf:type owl:ObjectProperty ;
+                               rdfs:domain clarity:Enrollment ;
+                               rdfs:range clarity:Goal ;
+                               clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation
+clarity:enrollmentHasCurrentLivingSituation rdf:type owl:ObjectProperty ;
+                                            rdfs:domain clarity:Enrollment ;
+                                            rdfs:range clarity:CurrentLivingSituation ;
+                                            clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#enrollmentHasForms
+clarity:enrollmentHasForms rdf:type owl:ObjectProperty ;
+                           rdfs:domain clarity:Enrollment ;
+                           rdfs:range clarity:Form ;
+                           clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404
+clarity:enrollmenthasHealthInsurance404 rdf:type owl:ObjectProperty ;
+                                        rdfs:domain clarity:Enrollment ;
+                                        rdfs:range clarity:HealthInsurance404 ;
+                                        clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation
+clarity:enrollmentHasPriorLivingSituation rdf:type owl:ObjectProperty ;
+                                          rdfs:domain clarity:Enrollment ;
+                                          rdfs:range clarity:PriorLivingSituation ;
+                                          clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment
+clarity:exitDestinationToEnrollment rdf:type owl:ObjectProperty ;
+                                    rdfs:domain clarity:Enrollment ;
+                                    rdfs:range clarity:ExitDestination ;
+                                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#formHasFile
+clarity:formHasFile rdf:type owl:ObjectProperty ;
+                    rdfs:domain clarity:Form ;
+                    rdfs:range clarity:File ;
+                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasClientAssessment
+clarity:hasClientAssessment rdf:type owl:ObjectProperty ;
+                            rdfs:domain clarity:Client ;
+                            rdfs:range clarity:Assessment ;
+                            clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasEnrollment
+clarity:hasEnrollment rdf:type owl:ObjectProperty ;
+                      rdfs:domain clarity:Client ;
+                      rdfs:range clarity:Enrollment ;
+                      clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment
+clarity:hasEnrollmentAssessment rdf:type owl:ObjectProperty ;
+                                rdfs:domain clarity:Enrollment ;
+                                rdfs:range clarity:Assessment ;
+                                clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasEnrollmentService
+clarity:hasEnrollmentService rdf:type owl:ObjectProperty ;
+                             rdfs:domain clarity:Enrollment ;
+                             rdfs:range clarity:ServiceProvision ;
+                             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasFile
+clarity:hasFile rdf:type owl:ObjectProperty ;
+                rdfs:domain clarity:Client ;
+                rdfs:range clarity:File ;
+                clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasProgramEnrollment
+clarity:hasProgramEnrollment rdf:type owl:ObjectProperty ;
+                             rdfs:domain clarity:Program ;
+                             rdfs:range clarity:Enrollment ;
+                             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasReferral
+clarity:hasReferral rdf:type owl:ObjectProperty ;
+                    rdfs:domain clarity:Enrollment ;
+                    rdfs:range clarity:Referral ;
+                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasReferralStatus
+clarity:hasReferralStatus rdf:type owl:ObjectProperty ;
+                          rdfs:domain clarity:Referral ;
+                          rdfs:range clarity:ReferralStatus ;
+                          clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#hasStandaloneService
+clarity:hasStandaloneService rdf:type owl:ObjectProperty ;
+                             rdfs:domain clarity:Client ;
+                             rdfs:range clarity:ServiceProvision ;
+                             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthChronicToEnrollment
+clarity:healthChronicToEnrollment rdf:type owl:ObjectProperty ;
+                                  rdfs:domain clarity:Enrollment ;
+                                  rdfs:range clarity:HealthChronic ;
+                                  clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment
+clarity:healthDvFleeingToEnrollment rdf:type owl:ObjectProperty ;
+                                    rdfs:domain clarity:Enrollment ;
+                                    rdfs:range clarity:HealthDvFleeing ;
+                                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment
+clarity:healthDvOccurredToEnrollment rdf:type owl:ObjectProperty ;
+                                     rdfs:domain clarity:Enrollment ;
+                                     rdfs:range clarity:HealthDvOccurred ;
+                                     clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthDvToEnrollment
+clarity:healthDvToEnrollment rdf:type owl:ObjectProperty ;
+                             rdfs:domain clarity:Enrollment ;
+                             rdfs:range clarity:HealthDv ;
+                             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability
+clarity:healthMentalLongtermToDisability rdf:type owl:ObjectProperty ;
+                                         rdfs:domain clarity:Disability ;
+                                         rdfs:range clarity:HealthMentalLongterm ;
+                                         clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthMentalToDisability
+clarity:healthMentalToDisability rdf:type owl:ObjectProperty ;
+                                 rdfs:domain clarity:Disability ;
+                                 rdfs:range clarity:HealthMental ;
+                                 clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment
+clarity:healthPregnancyToEnrollment rdf:type owl:ObjectProperty ;
+                                    rdfs:domain clarity:Enrollment ;
+                                    rdfs:range clarity:HealthPregnancy ;
+                                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability
+clarity:healthSubstanceAbuseLongtermToDisability rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain clarity:Disability ;
+                                                 rdfs:range clarity:HealthSubstanceAbuseLongterm ;
+                                                 clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability
+clarity:healthSubstanceAbuseToDisability rdf:type owl:ObjectProperty ;
+                                         rdfs:domain clarity:Disability ;
+                                         rdfs:range clarity:HealthSubstanceAbuse ;
+                                         clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#nameSuffixToClient
+clarity:nameSuffixToClient rdf:type owl:ObjectProperty ;
+                           rdfs:domain clarity:Client ;
+                           rdfs:range clarity:NameSuffix ;
+                           clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation
+clarity:priorResidenceToPriorLivingSituation rdf:type owl:ObjectProperty ;
+                                             rdfs:domain clarity:PriorLivingSituation ;
+                                             rdfs:range clarity:PriorResidence ;
+                                             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#programHasEligibility
+clarity:programHasEligibility rdf:type owl:ObjectProperty ;
+                              rdfs:domain clarity:Program ;
+                              rdfs:range clarity:Eligibility ;
+                              clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#referralHasAssessment
+clarity:referralHasAssessment rdf:type owl:ObjectProperty ;
+                              rdfs:domain clarity:Referral ;
+                              rdfs:range clarity:Assessment ;
+                              clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#referralHasQueue
+clarity:referralHasQueue rdf:type owl:ObjectProperty ;
+                         rdfs:domain clarity:Referral ;
+                         rdfs:range clarity:CommunityQueue ;
+                         clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#referralHasReplacement
+clarity:referralHasReplacement rdf:type owl:ObjectProperty ;
+                               rdfs:domain clarity:Referral ;
+                               rdfs:range clarity:Referral ;
+                               clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#serviceItemHasExpense
+clarity:serviceItemHasExpense rdf:type owl:ObjectProperty ;
+                              rdfs:domain clarity:ServiceProvision ;
+                              rdfs:range clarity:ServiceExpense ;
+                              clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision
+clarity:serviceItemToServiceProvision rdf:type owl:ObjectProperty ;
+                                      rdfs:domain clarity:ServiceItem ;
+                                      rdfs:range clarity:ServiceProvision ;
+                                      clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking
+clarity:serviceProvisionToServiceTimeTracking rdf:type owl:ObjectProperty ;
+                                              rdfs:domain clarity:ServiceProvision ;
+                                              rdfs:range clarity:ServiceTimeTracking ;
+                                              clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem
+clarity:serviceTaxonomyToServiceItem rdf:type owl:ObjectProperty ;
+                                     rdfs:domain clarity:ServiceItem ;
+                                     rdfs:range clarity:ServiceTaxonomy ;
+                                     clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#veteranToClient
+clarity:veteranToClient rdf:type owl:ObjectProperty ;
+                        rdfs:domain clarity:Client ;
+                        rdfs:range clarity:Veteran ;
+                        clarity:modelSet "housing-payment" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  urn:bitfocus:clarity:governance-model#BirthDate
+clarity:BirthDate rdf:type owl:DatatypeProperty ;
+                  rdfs:domain clarity:Client ;
+                  rdfs:range xsd:date ;
+                  dcterms:identifier "3.03.1" ;
+                  rdfs:comment "Clients birth date" ;
+                  rdfs:label "Date of Birth" ;
+                  clarity:classification "PII" ,
+                                         "non-sensitive" ;
+                  clarity:hmisElementName "DOB" ;
+                  clarity:modelSet "housing-payment" ;
+                  clarity:sql "clients.birth_date" .
+
+
+###  urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe
+clarity:FederallyRecognizedTribe rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain clarity:Client ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:label "Federally Recognized Tribe" ;
+                                 clarity:classification "non-sensitive" ;
+                                 clarity:modelSet "housing-payment" ;
+                                 clarity:sql "client_assessment_demographics.federally_recognized_tribe" ,
+                                             "client_demographics.federally_recognized_tribe" ,
+                                             "client_program_demographics.federally_recognized_tribe" .
+
+
+###  urn:bitfocus:clarity:governance-model#FirstName
+clarity:FirstName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain clarity:Client ;
+                  rdfs:range xsd:string ;
+                  dcterms:identifier "3.01.1" ;
+                  rdfs:label "First Name" ;
+                  clarity:classification "PII" ;
+                  clarity:hmisElementName "FirstName" ;
+                  clarity:modelSet "housing-payment" ;
+                  clarity:sql "clients.first_name" ,
+                              "members.first_name" .
+
+
+###  urn:bitfocus:clarity:governance-model#LastName
+clarity:LastName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain clarity:Client ;
+                 rdfs:range xsd:string ;
+                 dcterms:identifier "3.01.3" ;
+                 rdfs:label "Last Name" ;
+                 clarity:classification "PII" ;
+                 clarity:hmisElementName "LastName" ;
+                 clarity:modelSet "housing-payment" ;
+                 clarity:sql "clients.last_name" .
+
+
+###  urn:bitfocus:clarity:governance-model#MiddleName
+clarity:MiddleName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain clarity:Client ;
+                   rdfs:range xsd:string ;
+                   dcterms:identifier "3.01.2" ;
+                   rdfs:label "Middle Name" ;
+                   clarity:classification "non-sensitive" ;
+                   clarity:hmisElementName "MiddleName" ;
+                   clarity:modelSet "housing-payment" ;
+                   clarity:sql "client_assessment_demographics.name_middle" ,
+                               "client_demographics.name_middle" ,
+                               "client_program_demographics.name_middle" .
+
+
+###  urn:bitfocus:clarity:governance-model#OtherTribeSpecify
+clarity:OtherTribeSpecify rdf:type owl:DatatypeProperty ;
+                          rdfs:domain clarity:Client ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "A dependent field of Federally Recognized Tribe to allow additional data entry when a client is affiliated with a tribal entity not within the federally recognized tribes list." ;
+                          rdfs:label "Specify Other Tribe" ;
+                          clarity:classification "non-sensitive" ;
+                          clarity:modelSet "housing-payment" ;
+                          clarity:sql "client_assessment_demographics.other_tribe_specify" ,
+                                      "client_demographics.other_tribe_specify" ,
+                                      "client_program_demographics.other_tribe_specify" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceCountDays
+clarity:ServiceCountDays rdf:type owl:DatatypeProperty ;
+                         rdfs:domain clarity:Service ;
+                         rdfs:range xsd:integer ;
+                         rdfs:label "count_days" ;
+                         clarity:classification "non-sensitive" ;
+                         clarity:modelSet "housing-payment" ;
+                         clarity:sql "client_service_notification_info.count_days" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceExpenseNotes
+clarity:ServiceExpenseNotes rdf:type owl:DatatypeProperty ;
+                            rdfs:domain clarity:ServiceExpense ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "notes" ;
+                            clarity:classification "non-sensitive" ;
+                            clarity:modelSet "housing-payment" ;
+                            clarity:sql "client_service_expenses.notes" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceProvisionNotes
+clarity:ServiceProvisionNotes rdf:type owl:DatatypeProperty ;
+                              rdfs:domain clarity:ServiceProvision ;
+                              rdfs:range xsd:string ;
+                              rdfs:label "notes" ;
+                              clarity:classification "non-sensitive" ;
+                              clarity:modelSet "housing-payment" ;
+                              clarity:sql "client_service_notes.notes" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode
+clarity:ServiceTaxonomyCode rdf:type owl:DatatypeProperty ;
+                            rdfs:domain clarity:ServiceTaxonomy ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "code" ;
+                            clarity:classification "non-sensitive" ;
+                            clarity:modelSet "housing-payment" ;
+                            clarity:sql "taxonomy.code" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour
+clarity:ServiceTimeTrackingTrackingHour rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain clarity:ServiceTimeTracking ;
+                                        rdfs:range xsd:integer ;
+                                        rdfs:label "tracking_hour" ;
+                                        clarity:classification "non-sensitive" ;
+                                        clarity:modelSet "housing-payment" ;
+                                        clarity:sql "client_service_time_tracking.tracking_hour" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute
+clarity:ServiceTimeTrackingTrackingMinute rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain clarity:ServiceTimeTracking ;
+                                          rdfs:range xsd:integer ;
+                                          rdfs:label "tracking_minute" ;
+                                          clarity:classification "non-sensitive" ;
+                                          clarity:modelSet "housing-payment" ;
+                                          clarity:sql "client_service_time_tracking.tracking_minute" .
+
+
+###  urn:bitfocus:clarity:governance-model#Ssn
+clarity:Ssn rdf:type owl:DatatypeProperty ;
+            rdfs:domain clarity:Client ;
+            rdfs:comment "HMIS Data Standards Element 3.02" ;
+            clarity:classification "PII" ;
+            clarity:modelSet "housing-payment" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  urn:hud:hmis:owl#Project
+hmis:Project rdf:type owl:Class ;
+             rdfs:subClassOf clarity:Program .
+
+###  urn:hud:hmis:owl#Enrollment
+hmis:Enrollment rdf:type owl:Class ;
+                rdfs:subClassOf clarity:Enrollment .
+
+###  urn:hud:hmis:owl#Client
+hmis:Client rdf:type owl:Class ;
+            rdfs:subClassOf clarity:Client .
+
+###  urn:hud:hmis:owl#Assessment
+hmis:Assessment rdf:type owl:Class ;
+                rdfs:subClassOf clarity:Assessment .
+
+###  urn:bitfocus:clarity:governance-model#Disability
+clarity:Disability rdf:type owl:Class ;
+                   dcterms:identifier "4.05-4.10" ;
+                   rdfs:label "Disabilities " ;
+                   clarity:isPartOfScreen clarity:Enrollment ;
+                   clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthInsurance404
+clarity:HealthInsurance404 rdf:type owl:Class ;
+                           dcterms:identifier "4.04.*" ;
+                           rdfs:label "Health Insurance" ;
+                           clarity:isPartOfScreen clarity:Enrollment ;
+                           clarity:modelSet "housing-payment" .
+
+###  urn:bitfocus:clarity:governance-model#Assessment
+clarity:Assessment rdf:type owl:Class ;
+                   rdfs:comment "An assessment is a group of questions displayed on a screen that are used to track a client's progress over time.  These assessments may or may not be assigned to an assessment processor." ;
+                   clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#BenefitsMedicaid
+clarity:BenefitsMedicaid rdf:type owl:Class ;
+                         dcterms:identifier "4.04.3" ;
+                         rdfs:comment "MEDICAID health insurance program" ;
+                         rdfs:label "BenefitsMedicaid" ,
+                                    "MEDICAID" ;
+                         clarity:hmisElementName "Medicaid" ;
+                         clarity:isPartOfScreen clarity:Enrollment ;
+                         clarity:modelSet "housing-payment" ;
+                         clarity:sql "client_program_demographics.benefits_medicaid" .
+
+
+###  urn:bitfocus:clarity:governance-model#Client
+clarity:Client rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:comment "Represents individuals whose information is stored in Clarity Human Services. The system allows for searching, viewing, editing, and managing client records, profiles, enrollments, services, assessments, and privacy settings (like Release of Information). The Client Model in Looker allows analysis across various client interactions."@en ;
+               rdfs:label "Client"@en ;
+               clarity:looker "Clients" ;
+               clarity:modelSet "housing-payment" ;
+               clarity:sql "clients.*" .
+
+
+###  urn:bitfocus:clarity:governance-model#CommunityQueue
+clarity:CommunityQueue rdf:type owl:Class ;
+                       rdfs:comment "Community Queue allows communities to triage and prioritize client referrals across programs, agencies, and systems of care."@en ;
+                       clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#CurrentLivingSituation
+clarity:CurrentLivingSituation rdf:type owl:Class ;
+                               clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Eligibility
+clarity:Eligibility rdf:type owl:Class ;
+                    rdfs:comment "The Program Eligibility feature simplifies the referral process by allowing users to set up Eligibility requirements for a program. These requirements dictate which programs display as eligible for a client after you complete an assessment with Eligibility Engine enabled. " ;
+                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Enrollment
+clarity:Enrollment rdf:type owl:Class ;
+                   rdfs:label "Enrollment" ;
+                   clarity:looker "Enrollments, Entry Screen,  Exit Screen,  Followup Screen, Status Screen" ;
+                   clarity:modelSet "housing-payment" ;
+                   clarity:sql "client_program_demographics.*" ,
+                               "client_programs.*" .
+
+
+###  urn:bitfocus:clarity:governance-model#ExitDestination
+clarity:ExitDestination rdf:type owl:Class ;
+                        clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#File
+clarity:File rdf:type owl:Class ;
+             rdfs:comment "Files can be uploaded under different categories, and attached at either the client proflie or program level." ;
+             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Form
+clarity:Form rdf:type owl:Class ;
+             rdfs:comment "Client Forms need to be enabled at the Agency and potentially Program level before use. Enabling forms allows them to be available in the client record's Files tab for completion and uploading." ;
+             clarity:looker "Clients / Client Files" ;
+             clarity:modelSet "housing-payment" ;
+             clarity:sql "client_forms.*" .
+
+
+###  urn:bitfocus:clarity:governance-model#Gender
+clarity:Gender rdf:type owl:Class ;
+               dcterms:identifier "3.06.1" ;
+               rdfs:label "Gender" ;
+               clarity:classification "non-sensitive" ;
+               clarity:hmisElementName "Gender" ;
+               clarity:modelSet "housing-payment" ;
+               clarity:sql "client_assessment_demographics.gender" ,
+                           "client_demographics.gender" ,
+                           "client_program_demographics.gender" .
+
+
+###  urn:bitfocus:clarity:governance-model#Geolocation
+clarity:Geolocation rdf:type owl:Class ;
+                    rdfs:comment "Geolocation is a field type to collected specific location data in the system." ;
+                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Goal
+clarity:Goal rdf:type owl:Class ;
+             rdfs:comment "Program Goals allow staff members to track whether a client accomplished a goal within an enrollment based on either demographic, service, or time-based data." ;
+             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthChronic
+clarity:HealthChronic rdf:type owl:Class ;
+                      dcterms:identifier "4.07.2" ;
+                      rdfs:comment "HMIS Data Element 4.07 Chronic Health Condition" ;
+                      rdfs:label "Chronic Health Condition" ,
+                                 "HealthChronic" ;
+                      clarity:hmisElementName "DisabilityResponseChronicHealthCondition" ;
+                      clarity:isPartOfScreen clarity:Enrollment ;
+                      clarity:modelSet "housing-payment" ;
+                      clarity:sql "client_program_demographics.health_chronic" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthDv
+clarity:HealthDv rdf:type owl:Class ;
+                 dcterms:identifier "4.11.2" ;
+                 rdfs:comment "If the person is a survivor of domestic violence." ;
+                 rdfs:label "HealthDv" ,
+                            "Survivor of Domestic Violence" ;
+                 clarity:hmisElementName "DomesticViolenceSurvivor" ;
+                 clarity:isPartOfScreen clarity:Enrollment ;
+                 clarity:modelSet "housing-payment" ;
+                 clarity:sql "client_program_demographics.health_dv" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthDvFleeing
+clarity:HealthDvFleeing rdf:type owl:Class ;
+                        dcterms:identifier "4.11.B" ;
+                        rdfs:comment "Are you currently fleeing domestic violence?" ;
+                        rdfs:label "Are you currently fleeing?" ,
+                                   "HealthDvFleeing" ;
+                        clarity:hmisElementName "CurrentlyFleeing" ;
+                        clarity:isPartOfScreen clarity:Enrollment ;
+                        clarity:modelSet "housing-payment" ;
+                        clarity:sql "client_program_demographics.health_dv_fleeing" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthDvOccurred
+clarity:HealthDvOccurred rdf:type owl:Class ;
+                         dcterms:identifier "4.11.A" ;
+                         rdfs:comment "How long ago did the person have the most recent experience." ;
+                         rdfs:label "HealthDvOccurred" ,
+                                    "When experience occurred" ;
+                         clarity:hmisElementName "WhenOccurred" ;
+                         clarity:isPartOfScreen clarity:Enrollment ;
+                         clarity:modelSet "housing-payment" ;
+                         clarity:sql "client_program_demographics.health_dv_occurred" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthMental
+clarity:HealthMental rdf:type owl:Class ;
+                     dcterms:identifier "4.09.2" ;
+                     rdfs:comment "HMIS Data Element 4.09 Mental Health Disorder" ;
+                     rdfs:label "HealthMental" ,
+                                "Mental Health Disorder" ;
+                     clarity:hmisElementName "DisabilityResponseMentalHealthDisorder" ;
+                     clarity:isPartOfScreen clarity:Enrollment ;
+                     clarity:modelSet "housing-payment" ;
+                     clarity:sql "client_program_demographics.health_mental" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthMentalLongterm
+clarity:HealthMentalLongterm rdf:type owl:Class ;
+                             dcterms:identifier "4.09.A" ;
+                             rdfs:comment "If the problem is expected to be of long-continued and indefinite duration and substantially impedes a client‚Äôs ability to live" ;
+                             rdfs:label "HealthMentalLongterm" ,
+                                        "Long Term Mental Health Problem" ;
+                             clarity:hmisElementName "IndefiniteAndImpairsMentalHealthDisorder" ;
+                             clarity:isPartOfScreen clarity:Enrollment ;
+                             clarity:modelSet "housing-payment" ;
+                             clarity:sql "client_program_demographics.health_mental_longterm" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthPregnancy
+clarity:HealthPregnancy rdf:type owl:Class ;
+                        dcterms:identifier "R10.1" ;
+                        rdfs:comment "HMIS Data Element R10 Pregnancy Status collected on RHY client Program Enrollment and Update screens" ;
+                        rdfs:label "HealthPregnancy" ,
+                                   "Pregnancy Status" ;
+                        clarity:hmisElementName "PregnancyStatus" ;
+                        clarity:isPartOfScreen clarity:Enrollment ;
+                        clarity:modelSet "housing-payment" ;
+                        clarity:sql "client_program_demographics.health_pregnancy" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse
+clarity:HealthSubstanceAbuse rdf:type owl:Class ;
+                             dcterms:identifier "4.10.2" ;
+                             rdfs:comment "If the client has an alcohol or drug use disorder or both." ;
+                             rdfs:label "HealthSubstanceAbuse" ,
+                                        "Substance Use Disorder" ;
+                             clarity:hmisElementName "DisabilityResponseSubstanceUseDisorder" ;
+                             clarity:isPartOfScreen clarity:Enrollment ;
+                             clarity:modelSet "housing-payment" ;
+                             clarity:sql "client_program_demographics.health_substance_abuse" .
+
+
+###  urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm
+clarity:HealthSubstanceAbuseLongterm rdf:type owl:Class ;
+                                     dcterms:identifier "4.10.A" ;
+                                     rdfs:comment "If the problem is expected to be of long, continued and indefinite duration and substantially impedes a clients ability to live independently" ;
+                                     rdfs:label "HealthSubstanceAbuseLongterm" ,
+                                                "Long Term Substance Abuse Problem" ;
+                                     clarity:hmisElementName "IndefiniteAndImpairsSubstanceUseDisorder" ;
+                                     clarity:isPartOfScreen clarity:Enrollment ;
+                                     clarity:modelSet "housing-payment" ;
+                                     clarity:sql "client_program_demographics.health_substance_abuse_longterm" .
+
+
+###  urn:bitfocus:clarity:governance-model#NameSuffix
+clarity:NameSuffix rdf:type owl:Class ;
+                   dcterms:identifier "3.01.4" ;
+                   rdfs:comment "Suffix" ;
+                   rdfs:label "NameSuffix" ,
+                              "Suffix" ;
+                   clarity:hmisElementName "NameSuffix" ;
+                   clarity:isPartOfScreen clarity:Client ;
+                   clarity:modelSet "housing-payment" ;
+                   clarity:sql "client_demographics.name_suffix" .
+
+
+###  urn:bitfocus:clarity:governance-model#PriorLivingSituation
+clarity:PriorLivingSituation rdf:type owl:Class ;
+                             rdfs:comment "HMIS Data Element 3.917: Prior Living Situation fields in collaboration with 3.08 Disabling Condition are utilized to calculate a client's Chronic Homeless status. Chronic Homelessness is defined as experiencing literal homelessness for 12+ consecutive months, or 4+ episodes adding up to 12+ months over the past 3 years, and having a disabling condition. " ;
+                             rdfs:label "Prior Living Situation" ;
+                             clarity:looker "Client Model: Entry Screen - Prior Living Situation; HMIS Performance: Entry Screen - Prior Living Situation; Coordinated Entry: Entry Screen - Prior Living Situation" ;
+                             clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#PriorResidence
+clarity:PriorResidence rdf:type owl:Class ;
+                       clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Program
+clarity:Program rdf:type owl:Class ;
+                rdfs:subClassOf owl:Thing ;
+                dc:description ""@en ;
+                rdfs:comment "Clarity Programs are equivalent to the HMIS Project." ;
+                rdfs:label "Program" ;
+                clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Referral
+clarity:Referral rdf:type owl:Class ;
+                 rdfs:comment "The process of directing a client to a program or Community Queue for services or housing. Referrals have statuses (Pending, Denied, Expired, Completed), can be assigned case managers or navigators, and involve tracking eligibility, priority, and history. Referral Settings allow administrators to customize the process."@en ;
+                 clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#ReferralStatus
+clarity:ReferralStatus rdf:type owl:Class ;
+                       rdfs:comment "Indicates the current state of a referral (Pending, Pending - In Process, Denied, Expired, Completed) and impacts where it displays. It communicates acceptance, processing stage, or expiration/denial. Status can be updated based on user actions or system settings like expiration thresholds."@en ;
+                       clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Service
+clarity:Service rdf:type owl:Class ;
+                clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceExpense
+clarity:ServiceExpense rdf:type owl:Class ;
+                       clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceItem
+clarity:ServiceItem rdf:type owl:Class ;
+                    rdfs:subClassOf clarity:Service ;
+                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceProvision
+clarity:ServiceProvision rdf:type owl:Class ;
+                         rdfs:label "Service Provision" ;
+                         clarity:modelSet "housing-payment" ;
+                         clarity:sql "client_services.*" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceTaxonomy
+clarity:ServiceTaxonomy rdf:type owl:Class ;
+                        clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#ServiceTimeTracking
+clarity:ServiceTimeTracking rdf:type owl:Class ;
+                            clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#Sex
+clarity:Sex rdf:type owl:Class ;
+            dcterms:identifier "4.21.1 Sex" ;
+            rdfs:label "Sex" ;
+            clarity:classification "non-sensitive" ;
+            clarity:hmisElementName "Sex" ;
+            clarity:modelSet "housing-payment" ;
+            clarity:sql "client_assessment_demographics.sex" ,
+                        "client_demographics.sex" ,
+                        "client_program_demographics.sex" .
+
+
+###  urn:bitfocus:clarity:governance-model#Veteran
+clarity:Veteran rdf:type owl:Class ;
+                dcterms:identifier "3.07.1" ;
+                rdfs:comment "A veteran is someone who has served on active duty in the Armed Forces of the United States. This does not include inactive mili" ;
+                rdfs:label "Veteran Status" ;
+                clarity:hmisElementName "VeteranStatus" ;
+                clarity:isPartOfScreen clarity:Client ;
+                clarity:modelSet "housing-payment" ;
+                clarity:sql "client_demographics.veteran" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215
+clarity:FosterCareHomeOrFosterCareGroupHome_215 rdf:type owl:NamedIndividual ,
+                                                         clarity:CurrentLivingSituation ,
+                                                         clarity:ExitDestination ,
+                                                         clarity:PriorResidence ;
+                                                rdfs:label "Foster care home or foster care group home" ;
+                                                skos:notation "215"^^xsd:token ;
+                                                clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206
+clarity:HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206 rdf:type owl:NamedIndividual ,
+                                                                             clarity:CurrentLivingSituation ,
+                                                                             clarity:ExitDestination ,
+                                                                             clarity:PriorResidence ;
+                                                                    rdfs:label "Hospital or other residential non-psychiatric medical facility" ;
+                                                                    skos:notation "206"^^xsd:token ;
+                                                                    clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207
+clarity:JailPrisonOrJuvenileDetentionFacility_207 rdf:type owl:NamedIndividual ,
+                                                           clarity:CurrentLivingSituation ,
+                                                           clarity:ExitDestination ,
+                                                           clarity:PriorResidence ;
+                                                  rdfs:label "Jail, prison, or juvenile detention facility" ;
+                                                  skos:notation "207"^^xsd:token ;
+                                                  clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204
+clarity:PsychiatricHospitalOrOtherPsychiatricFacility_204 rdf:type owl:NamedIndividual ,
+                                                                   clarity:CurrentLivingSituation ,
+                                                                   clarity:ExitDestination ,
+                                                                   clarity:PriorResidence ;
+                                                          rdfs:label "Psychiatric hospital or other psychiatric facility" ;
+                                                          skos:notation "204"^^xsd:token ;
+                                                          clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#SafeHaven_118
+clarity:SafeHaven_118 rdf:type owl:NamedIndividual ,
+                               clarity:CurrentLivingSituation ,
+                               clarity:ExitDestination ,
+                               clarity:PriorResidence ;
+                      rdfs:label "Safe Haven" ;
+                      skos:notation "118"^^xsd:token ;
+                      clarity:modelSet "housing-payment" .
+
+
+###  urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302
+clarity:TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302 rdf:type owl:NamedIndividual ,
+                                                                                 clarity:CurrentLivingSituation ,
+                                                                                 clarity:ExitDestination ,
+                                                                                 clarity:PriorResidence ;
+                                                                        rdfs:label "Transitional housing for homeless persons (including homeless youth)" ;
+                                                                        skos:notation "302"^^xsd:token ;
+                                                                        clarity:modelSet "housing-payment" .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
