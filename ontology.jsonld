@@ -1,0 +1,1655 @@
+[ {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#boolean",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#time",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "O'Sullivan, Jim ; Bianchi, Lauren ; Warren, John ; Jahn, Eric"
+  } ],
+  "http://purl.org/dc/elements/1.1/language" : [ {
+    "@value" : "en-US"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "Bitfocus Clarity Housing Payment Model"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#v1.0.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0.0"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Assessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An assessment is a group of questions displayed on a screen that are used to track a client's progress over time.  These assessments may or may not be assigned to an assessment processor."
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#BenefitsMedicaid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.04.3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "MEDICAID health insurance program"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "BenefitsMedicaid"
+  }, {
+    "@value" : "MEDICAID"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "Medicaid"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.benefits_medicaid"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#BirthDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "3.03.1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Clients birth date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Date of Birth"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "PII"
+  }, {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "DOB"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "clients.birth_date"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Client",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents individuals whose information is stored in Clarity Human Services. The system allows for searching, viewing, editing, and managing client records, profiles, enrollments, services, assessments, and privacy settings (like Release of Information). The Client Model in Looker allows analysis across various client interactions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "urn:bitfocus:clarity:governance-model#looker" : [ {
+    "@value" : "Clients"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "clients.*"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#CommunityQueue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Community Queue allows communities to triage and prioritize client referrals across programs, agencies, and systems of care."
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Disability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.05-4.10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Disabilities "
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Eligibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Program Eligibility feature simplifies the referral process by allowing users to set up Eligibility requirements for a program. These requirements dictate which programs display as eligible for a client after you complete an assessment with Eligibility Engine enabled. "
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Enrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#looker" : [ {
+    "@value" : "Enrollments, Entry Screen,  Exit Screen,  Followup Screen, Status Screen"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.*"
+  }, {
+    "@value" : "client_programs.*"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Federally Recognized Tribe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_assessment_demographics.federally_recognized_tribe"
+  }, {
+    "@value" : "client_demographics.federally_recognized_tribe"
+  }, {
+    "@value" : "client_program_demographics.federally_recognized_tribe"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#File",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Files can be uploaded under different categories, and attached at either the client proflie or program level."
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#FirstName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "3.01.1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "First Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "PII"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "FirstName"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "clients.first_name"
+  }, {
+    "@value" : "members.first_name"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Client Forms need to be enabled at the Agency and potentially Program level before use. Enabling forms allows them to be available in the client record's Files tab for completion and uploading."
+  } ],
+  "urn:bitfocus:clarity:governance-model#looker" : [ {
+    "@value" : "Clients / Client Files"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_forms.*"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Foster care home or foster care group home"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#token",
+    "@value" : "215"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "3.06.1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gender"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "Gender"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_assessment_demographics.gender"
+  }, {
+    "@value" : "client_demographics.gender"
+  }, {
+    "@value" : "client_program_demographics.gender"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Geolocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Geolocation is a field type to collected specific location data in the system."
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Goal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Program Goals allow staff members to track whether a client accomplished a goal within an enrollment based on either demographic, service, or time-based data."
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthChronic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.07.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "HMIS Data Element 4.07 Chronic Health Condition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Chronic Health Condition"
+  }, {
+    "@value" : "HealthChronic"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "DisabilityResponseChronicHealthCondition"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_chronic"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthDv",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.11.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If the person is a survivor of domestic violence."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HealthDv"
+  }, {
+    "@value" : "Survivor of Domestic Violence"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "DomesticViolenceSurvivor"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_dv"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthDvFleeing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.11.B"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Are you currently fleeing domestic violence?"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Are you currently fleeing?"
+  }, {
+    "@value" : "HealthDvFleeing"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "CurrentlyFleeing"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_dv_fleeing"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthDvOccurred",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.11.A"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "How long ago did the person have the most recent experience."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HealthDvOccurred"
+  }, {
+    "@value" : "When experience occurred"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "WhenOccurred"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_dv_occurred"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthInsurance404",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.04.*"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Health Insurance"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthMental",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.09.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "HMIS Data Element 4.09 Mental Health Disorder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HealthMental"
+  }, {
+    "@value" : "Mental Health Disorder"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "DisabilityResponseMentalHealthDisorder"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_mental"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthMentalLongterm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.09.A"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If the problem is expected to be of long-continued and indefinite duration and substantially impedes a client‚Äôs ability to live"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HealthMentalLongterm"
+  }, {
+    "@value" : "Long Term Mental Health Problem"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "IndefiniteAndImpairsMentalHealthDisorder"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_mental_longterm"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthPregnancy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "R10.1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "HMIS Data Element R10 Pregnancy Status collected on RHY client Program Enrollment and Update screens"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HealthPregnancy"
+  }, {
+    "@value" : "Pregnancy Status"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "PregnancyStatus"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_pregnancy"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.10.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If the client has an alcohol or drug use disorder or both."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HealthSubstanceAbuse"
+  }, {
+    "@value" : "Substance Use Disorder"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "DisabilityResponseSubstanceUseDisorder"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_substance_abuse"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.10.A"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "If the problem is expected to be of long, continued and indefinite duration and substantially impedes a clients ability to live independently"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HealthSubstanceAbuseLongterm"
+  }, {
+    "@value" : "Long Term Substance Abuse Problem"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "IndefiniteAndImpairsSubstanceUseDisorder"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_program_demographics.health_substance_abuse_longterm"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hospital or other residential non-psychiatric medical facility"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#token",
+    "@value" : "206"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#InventoryRecords"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Jail, prison, or juvenile detention facility"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#token",
+    "@value" : "207"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#LastName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "3.01.3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Last Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "PII"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "LastName"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "clients.last_name"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ManualInventory"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#MiddleName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "3.01.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Middle Name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "MiddleName"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_assessment_demographics.name_middle"
+  }, {
+    "@value" : "client_demographics.name_middle"
+  }, {
+    "@value" : "client_program_demographics.name_middle"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#NameSuffix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "3.01.4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Suffix"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "NameSuffix"
+  }, {
+    "@value" : "Suffix"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "NameSuffix"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_demographics.name_suffix"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#OtherTribeSpecify",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A dependent field of Federally Recognized Tribe to allow additional data entry when a client is affiliated with a tribal entity not within the federally recognized tribes list."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Specify Other Tribe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_assessment_demographics.other_tribe_specify"
+  }, {
+    "@value" : "client_demographics.other_tribe_specify"
+  }, {
+    "@value" : "client_program_demographics.other_tribe_specify"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#OutreachEvents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#OutreachSettingEvents"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#PriorLivingSituation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "HMIS Data Element 3.917: Prior Living Situation fields in collaboration with 3.08 Disabling Condition are utilized to calculate a client's Chronic Homeless status. Chronic Homelessness is defined as experiencing literal homelessness for 12+ consecutive months, or 4+ episodes adding up to 12+ months over the past 3 years, and having a disabling condition. "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Prior Living Situation"
+  } ],
+  "urn:bitfocus:clarity:governance-model#looker" : [ {
+    "@value" : "Client Model: Entry Screen - Prior Living Situation; HMIS Performance: Entry Screen - Prior Living Situation; Coordinated Entry: Entry Screen - Prior Living Situation"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Program",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Clarity Programs are equivalent to the HMIS Project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Program"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Psychiatric hospital or other psychiatric facility"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#token",
+    "@value" : "204"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Referral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The process of directing a client to a program or Community Queue for services or housing. Referrals have statuses (Pending, Denied, Expired, Completed), can be assigned case managers or navigators, and involve tracking eligibility, priority, and history. Referral Settings allow administrators to customize the process."
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ReferralStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the current state of a referral (Pending, Pending - In Process, Denied, Expired, Completed) and impacts where it displays. It communicates acceptance, processing stage, or expiration/denial. Status can be updated based on user actions or system settings like expiration thresholds."
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#SafeHaven_118",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Safe Haven"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#token",
+    "@value" : "118"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceCountDays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "count_days"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_service_notification_info.count_days"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceExpense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceExpenseNotes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceExpense"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "notes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_service_expenses.notes"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Service"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Service Provision"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_services.*"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvisionNotes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "notes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_service_notes.notes"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceTaxonomy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceTaxonomy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "taxonomy.code"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceTimeTracking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceTimeTracking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tracking_hour"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_service_time_tracking.tracking_hour"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceTimeTracking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tracking_minute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_service_time_tracking.tracking_minute"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Sex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "4.21.1 Sex"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sex"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "non-sensitive"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "Sex"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_assessment_demographics.sex"
+  }, {
+    "@value" : "client_demographics.sex"
+  }, {
+    "@value" : "client_program_demographics.sex"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Ssn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "HMIS Data Standards Element 3.02"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "urn:bitfocus:clarity:governance-model#classification" : [ {
+    "@value" : "PII"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination"
+  }, {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Transitional housing for homeless persons (including homeless youth)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#token",
+    "@value" : "302"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#Veteran",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "3.07.1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A veteran is someone who has served on active duty in the Armed Forces of the United States. This does not include inactive mili"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Veteran Status"
+  } ],
+  "urn:bitfocus:clarity:governance-model#hmisElementName" : [ {
+    "@value" : "VeteranStatus"
+  } ],
+  "urn:bitfocus:clarity:governance-model#isPartOfScreen" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#sql" : [ {
+    "@value" : "client_demographics.veteran"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthInsurance404"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#BenefitsMedicaid"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#classification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#clientHasBiologicalSex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Sex"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#clientHasForm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Form"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#clientHasGender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Gender"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Goal"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#enrollmentHasForms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Form"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorLivingSituation"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthInsurance404"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ExitDestination"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#formHasFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Form"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#File"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasClientAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Assessment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Assessment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasEnrollmentService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvision"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#File"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasProgramEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Program"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasReferral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Referral"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasReferralStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Referral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ReferralStatus"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hasStandaloneService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvision"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthChronicToDisability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Disability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthChronic"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthChronicToEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthChronic"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthDvFleeing"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthDvOccurred"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthDvToEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthDv"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Disability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthMentalLongterm"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthMentalToDisability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Disability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthMental"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthPregnancy"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Disability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Disability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#hmisElementName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#isPartOfScreen",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#looker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#modelSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#nameSuffixToClient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#NameSuffix"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorLivingSituation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#PriorResidence"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#programHasEligibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Program"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Eligibility"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#referralHasAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Referral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Assessment"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#referralHasQueue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Referral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#CommunityQueue"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#referralHasReplacement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Referral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Referral"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#serviceItemHasExpense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceExpense"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvision"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceProvision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceTimeTracking"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#ServiceTaxonomy"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#sql",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "urn:bitfocus:clarity:governance-model#veteranToClient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Veteran"
+  } ],
+  "urn:bitfocus:clarity:governance-model#modelSet" : [ {
+    "@value" : "housing-payment"
+  } ]
+}, {
+  "@id" : "urn:hud:hmis:owl#Assessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Assessment"
+  } ]
+}, {
+  "@id" : "urn:hud:hmis:owl#Client",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Client"
+  } ]
+}, {
+  "@id" : "urn:hud:hmis:owl#Enrollment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Enrollment"
+  } ]
+}, {
+  "@id" : "urn:hud:hmis:owl#Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "urn:bitfocus:clarity:governance-model#Program"
+  } ]
+} ]

@@ -1,0 +1,858 @@
+<urn:bitfocus:clarity:governance-model#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<urn:bitfocus:clarity:governance-model#> <http://www.w3.org/2002/07/owl#versionIRI> <urn:bitfocus:clarity:governance-model#v1.0.0> .
+<urn:bitfocus:clarity:governance-model#> <http://purl.org/dc/elements/1.1/creator> "O'Sullivan, Jim ; Bianchi, Lauren ; Warren, John ; Jahn, Eric"@en .
+<urn:bitfocus:clarity:governance-model#> <http://purl.org/dc/elements/1.1/language> "en-US" .
+<urn:bitfocus:clarity:governance-model#> <http://purl.org/dc/elements/1.1/title> "Bitfocus Clarity Housing Payment Model" .
+<urn:bitfocus:clarity:governance-model#> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#comment
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#domain
+<http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus
+<urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#InventoryRecords> .
+# 
+# urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType
+<urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ManualInventory> .
+# 
+# urn:bitfocus:clarity:governance-model#OutreachEvents
+<urn:bitfocus:clarity:governance-model#OutreachEvents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<urn:bitfocus:clarity:governance-model#OutreachEvents> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#OutreachSettingEvents> .
+# 
+# urn:bitfocus:clarity:governance-model#classification
+<urn:bitfocus:clarity:governance-model#classification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# urn:bitfocus:clarity:governance-model#hmisElementName
+<urn:bitfocus:clarity:governance-model#hmisElementName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# urn:bitfocus:clarity:governance-model#isPartOfScreen
+<urn:bitfocus:clarity:governance-model#isPartOfScreen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# urn:bitfocus:clarity:governance-model#looker
+<urn:bitfocus:clarity:governance-model#looker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# urn:bitfocus:clarity:governance-model#modelSet
+<urn:bitfocus:clarity:governance-model#modelSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# urn:bitfocus:clarity:governance-model#sql
+<urn:bitfocus:clarity:governance-model#sql> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#boolean
+<http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#time
+<http://www.w3.org/2001/XMLSchema#time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404
+<urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#HealthInsurance404> .
+<urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#BenefitsMedicaid> .
+<urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#clientHasBiologicalSex
+<urn:bitfocus:clarity:governance-model#clientHasBiologicalSex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#clientHasBiologicalSex> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#clientHasBiologicalSex> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Sex> .
+<urn:bitfocus:clarity:governance-model#clientHasBiologicalSex> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#clientHasForm
+<urn:bitfocus:clarity:governance-model#clientHasForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#clientHasForm> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#clientHasForm> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Form> .
+<urn:bitfocus:clarity:governance-model#clientHasForm> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#clientHasGender
+<urn:bitfocus:clarity:governance-model#clientHasGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#clientHasGender> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#clientHasGender> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Gender> .
+<urn:bitfocus:clarity:governance-model#clientHasGender> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal
+<urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Goal> .
+<urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation
+<urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#CurrentLivingSituation> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#enrollmentHasForms
+<urn:bitfocus:clarity:governance-model#enrollmentHasForms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasForms> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasForms> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Form> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasForms> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation
+<urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#PriorLivingSituation> .
+<urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404
+<urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthInsurance404> .
+<urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment
+<urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ExitDestination> .
+<urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#formHasFile
+<urn:bitfocus:clarity:governance-model#formHasFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#formHasFile> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Form> .
+<urn:bitfocus:clarity:governance-model#formHasFile> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#File> .
+<urn:bitfocus:clarity:governance-model#formHasFile> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasClientAssessment
+<urn:bitfocus:clarity:governance-model#hasClientAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasClientAssessment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#hasClientAssessment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Assessment> .
+<urn:bitfocus:clarity:governance-model#hasClientAssessment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasEnrollment
+<urn:bitfocus:clarity:governance-model#hasEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#hasEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#hasEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment
+<urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Assessment> .
+<urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasEnrollmentService
+<urn:bitfocus:clarity:governance-model#hasEnrollmentService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasEnrollmentService> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#hasEnrollmentService> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ServiceProvision> .
+<urn:bitfocus:clarity:governance-model#hasEnrollmentService> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasFile
+<urn:bitfocus:clarity:governance-model#hasFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasFile> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#hasFile> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#File> .
+<urn:bitfocus:clarity:governance-model#hasFile> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasProgramEnrollment
+<urn:bitfocus:clarity:governance-model#hasProgramEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasProgramEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Program> .
+<urn:bitfocus:clarity:governance-model#hasProgramEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#hasProgramEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasReferral
+<urn:bitfocus:clarity:governance-model#hasReferral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasReferral> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#hasReferral> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Referral> .
+<urn:bitfocus:clarity:governance-model#hasReferral> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasReferralStatus
+<urn:bitfocus:clarity:governance-model#hasReferralStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasReferralStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Referral> .
+<urn:bitfocus:clarity:governance-model#hasReferralStatus> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ReferralStatus> .
+<urn:bitfocus:clarity:governance-model#hasReferralStatus> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#hasStandaloneService
+<urn:bitfocus:clarity:governance-model#hasStandaloneService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#hasStandaloneService> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#hasStandaloneService> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ServiceProvision> .
+<urn:bitfocus:clarity:governance-model#hasStandaloneService> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthChronicToDisability
+<urn:bitfocus:clarity:governance-model#healthChronicToDisability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthChronicToDisability> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Disability> .
+<urn:bitfocus:clarity:governance-model#healthChronicToDisability> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthChronic> .
+<urn:bitfocus:clarity:governance-model#healthChronicToDisability> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthChronicToEnrollment
+<urn:bitfocus:clarity:governance-model#healthChronicToEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthChronicToEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#healthChronicToEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthChronic> .
+<urn:bitfocus:clarity:governance-model#healthChronicToEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment
+<urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthDvFleeing> .
+<urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment
+<urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthDvOccurred> .
+<urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthDvToEnrollment
+<urn:bitfocus:clarity:governance-model#healthDvToEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthDvToEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#healthDvToEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthDv> .
+<urn:bitfocus:clarity:governance-model#healthDvToEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability
+<urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Disability> .
+<urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthMentalLongterm> .
+<urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthMentalToDisability
+<urn:bitfocus:clarity:governance-model#healthMentalToDisability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthMentalToDisability> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Disability> .
+<urn:bitfocus:clarity:governance-model#healthMentalToDisability> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthMental> .
+<urn:bitfocus:clarity:governance-model#healthMentalToDisability> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment
+<urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthPregnancy> .
+<urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Disability> .
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> .
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Disability> .
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> .
+<urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#nameSuffixToClient
+<urn:bitfocus:clarity:governance-model#nameSuffixToClient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#nameSuffixToClient> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#nameSuffixToClient> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#NameSuffix> .
+<urn:bitfocus:clarity:governance-model#nameSuffixToClient> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation
+<urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#PriorLivingSituation> .
+<urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#PriorResidence> .
+<urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#programHasEligibility
+<urn:bitfocus:clarity:governance-model#programHasEligibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#programHasEligibility> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Program> .
+<urn:bitfocus:clarity:governance-model#programHasEligibility> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Eligibility> .
+<urn:bitfocus:clarity:governance-model#programHasEligibility> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#referralHasAssessment
+<urn:bitfocus:clarity:governance-model#referralHasAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#referralHasAssessment> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Referral> .
+<urn:bitfocus:clarity:governance-model#referralHasAssessment> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Assessment> .
+<urn:bitfocus:clarity:governance-model#referralHasAssessment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#referralHasQueue
+<urn:bitfocus:clarity:governance-model#referralHasQueue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#referralHasQueue> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Referral> .
+<urn:bitfocus:clarity:governance-model#referralHasQueue> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#CommunityQueue> .
+<urn:bitfocus:clarity:governance-model#referralHasQueue> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#referralHasReplacement
+<urn:bitfocus:clarity:governance-model#referralHasReplacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#referralHasReplacement> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Referral> .
+<urn:bitfocus:clarity:governance-model#referralHasReplacement> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Referral> .
+<urn:bitfocus:clarity:governance-model#referralHasReplacement> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#serviceItemHasExpense
+<urn:bitfocus:clarity:governance-model#serviceItemHasExpense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#serviceItemHasExpense> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceProvision> .
+<urn:bitfocus:clarity:governance-model#serviceItemHasExpense> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ServiceExpense> .
+<urn:bitfocus:clarity:governance-model#serviceItemHasExpense> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision
+<urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceItem> .
+<urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ServiceProvision> .
+<urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking
+<urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceProvision> .
+<urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ServiceTimeTracking> .
+<urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem
+<urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceItem> .
+<urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#ServiceTaxonomy> .
+<urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#veteranToClient
+<urn:bitfocus:clarity:governance-model#veteranToClient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<urn:bitfocus:clarity:governance-model#veteranToClient> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#veteranToClient> <http://www.w3.org/2000/01/rdf-schema#range> <urn:bitfocus:clarity:governance-model#Veteran> .
+<urn:bitfocus:clarity:governance-model#veteranToClient> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# urn:bitfocus:clarity:governance-model#BirthDate
+<urn:bitfocus:clarity:governance-model#BirthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#BirthDate> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#BirthDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<urn:bitfocus:clarity:governance-model#BirthDate> <http://purl.org/dc/terms/identifier> "3.03.1" .
+<urn:bitfocus:clarity:governance-model#BirthDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Clients birth date" .
+<urn:bitfocus:clarity:governance-model#BirthDate> <http://www.w3.org/2000/01/rdf-schema#label> "Date of Birth" .
+<urn:bitfocus:clarity:governance-model#BirthDate> <urn:bitfocus:clarity:governance-model#classification> "PII" .
+<urn:bitfocus:clarity:governance-model#BirthDate> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#BirthDate> <urn:bitfocus:clarity:governance-model#hmisElementName> "DOB" .
+<urn:bitfocus:clarity:governance-model#BirthDate> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#BirthDate> <urn:bitfocus:clarity:governance-model#sql> "clients.birth_date" .
+# 
+# urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <http://www.w3.org/2000/01/rdf-schema#label> "Federally Recognized Tribe" .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <urn:bitfocus:clarity:governance-model#sql> "client_assessment_demographics.federally_recognized_tribe" .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <urn:bitfocus:clarity:governance-model#sql> "client_demographics.federally_recognized_tribe" .
+<urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.federally_recognized_tribe" .
+# 
+# urn:bitfocus:clarity:governance-model#FirstName
+<urn:bitfocus:clarity:governance-model#FirstName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#FirstName> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#FirstName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#FirstName> <http://purl.org/dc/terms/identifier> "3.01.1" .
+<urn:bitfocus:clarity:governance-model#FirstName> <http://www.w3.org/2000/01/rdf-schema#label> "First Name" .
+<urn:bitfocus:clarity:governance-model#FirstName> <urn:bitfocus:clarity:governance-model#classification> "PII" .
+<urn:bitfocus:clarity:governance-model#FirstName> <urn:bitfocus:clarity:governance-model#hmisElementName> "FirstName" .
+<urn:bitfocus:clarity:governance-model#FirstName> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#FirstName> <urn:bitfocus:clarity:governance-model#sql> "clients.first_name" .
+<urn:bitfocus:clarity:governance-model#FirstName> <urn:bitfocus:clarity:governance-model#sql> "members.first_name" .
+# 
+# urn:bitfocus:clarity:governance-model#LastName
+<urn:bitfocus:clarity:governance-model#LastName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#LastName> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#LastName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#LastName> <http://purl.org/dc/terms/identifier> "3.01.3" .
+<urn:bitfocus:clarity:governance-model#LastName> <http://www.w3.org/2000/01/rdf-schema#label> "Last Name" .
+<urn:bitfocus:clarity:governance-model#LastName> <urn:bitfocus:clarity:governance-model#classification> "PII" .
+<urn:bitfocus:clarity:governance-model#LastName> <urn:bitfocus:clarity:governance-model#hmisElementName> "LastName" .
+<urn:bitfocus:clarity:governance-model#LastName> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#LastName> <urn:bitfocus:clarity:governance-model#sql> "clients.last_name" .
+# 
+# urn:bitfocus:clarity:governance-model#MiddleName
+<urn:bitfocus:clarity:governance-model#MiddleName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#MiddleName> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#MiddleName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#MiddleName> <http://purl.org/dc/terms/identifier> "3.01.2" .
+<urn:bitfocus:clarity:governance-model#MiddleName> <http://www.w3.org/2000/01/rdf-schema#label> "Middle Name" .
+<urn:bitfocus:clarity:governance-model#MiddleName> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#MiddleName> <urn:bitfocus:clarity:governance-model#hmisElementName> "MiddleName" .
+<urn:bitfocus:clarity:governance-model#MiddleName> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#MiddleName> <urn:bitfocus:clarity:governance-model#sql> "client_assessment_demographics.name_middle" .
+<urn:bitfocus:clarity:governance-model#MiddleName> <urn:bitfocus:clarity:governance-model#sql> "client_demographics.name_middle" .
+<urn:bitfocus:clarity:governance-model#MiddleName> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.name_middle" .
+# 
+# urn:bitfocus:clarity:governance-model#OtherTribeSpecify
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <http://www.w3.org/2000/01/rdf-schema#comment> "A dependent field of Federally Recognized Tribe to allow additional data entry when a client is affiliated with a tribal entity not within the federally recognized tribes list." .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <http://www.w3.org/2000/01/rdf-schema#label> "Specify Other Tribe" .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <urn:bitfocus:clarity:governance-model#sql> "client_assessment_demographics.other_tribe_specify" .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <urn:bitfocus:clarity:governance-model#sql> "client_demographics.other_tribe_specify" .
+<urn:bitfocus:clarity:governance-model#OtherTribeSpecify> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.other_tribe_specify" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceCountDays
+<urn:bitfocus:clarity:governance-model#ServiceCountDays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#ServiceCountDays> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Service> .
+<urn:bitfocus:clarity:governance-model#ServiceCountDays> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<urn:bitfocus:clarity:governance-model#ServiceCountDays> <http://www.w3.org/2000/01/rdf-schema#label> "count_days" .
+<urn:bitfocus:clarity:governance-model#ServiceCountDays> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#ServiceCountDays> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#ServiceCountDays> <urn:bitfocus:clarity:governance-model#sql> "client_service_notification_info.count_days" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceExpenseNotes
+<urn:bitfocus:clarity:governance-model#ServiceExpenseNotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#ServiceExpenseNotes> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceExpense> .
+<urn:bitfocus:clarity:governance-model#ServiceExpenseNotes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#ServiceExpenseNotes> <http://www.w3.org/2000/01/rdf-schema#label> "notes" .
+<urn:bitfocus:clarity:governance-model#ServiceExpenseNotes> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#ServiceExpenseNotes> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#ServiceExpenseNotes> <urn:bitfocus:clarity:governance-model#sql> "client_service_expenses.notes" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceProvisionNotes
+<urn:bitfocus:clarity:governance-model#ServiceProvisionNotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#ServiceProvisionNotes> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceProvision> .
+<urn:bitfocus:clarity:governance-model#ServiceProvisionNotes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#ServiceProvisionNotes> <http://www.w3.org/2000/01/rdf-schema#label> "notes" .
+<urn:bitfocus:clarity:governance-model#ServiceProvisionNotes> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#ServiceProvisionNotes> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#ServiceProvisionNotes> <urn:bitfocus:clarity:governance-model#sql> "client_service_notes.notes" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceTaxonomy> .
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode> <http://www.w3.org/2000/01/rdf-schema#label> "code" .
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode> <urn:bitfocus:clarity:governance-model#sql> "taxonomy.code" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceTimeTracking> .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour> <http://www.w3.org/2000/01/rdf-schema#label> "tracking_hour" .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour> <urn:bitfocus:clarity:governance-model#sql> "client_service_time_tracking.tracking_hour" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#ServiceTimeTracking> .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute> <http://www.w3.org/2000/01/rdf-schema#label> "tracking_minute" .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute> <urn:bitfocus:clarity:governance-model#sql> "client_service_time_tracking.tracking_minute" .
+# 
+# urn:bitfocus:clarity:governance-model#Ssn
+<urn:bitfocus:clarity:governance-model#Ssn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<urn:bitfocus:clarity:governance-model#Ssn> <http://www.w3.org/2000/01/rdf-schema#domain> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#Ssn> <http://www.w3.org/2000/01/rdf-schema#comment> "HMIS Data Standards Element 3.02" .
+<urn:bitfocus:clarity:governance-model#Ssn> <urn:bitfocus:clarity:governance-model#classification> "PII" .
+<urn:bitfocus:clarity:governance-model#Ssn> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# urn:bitfocus:clarity:governance-model#Assessment
+<urn:bitfocus:clarity:governance-model#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "An assessment is a group of questions displayed on a screen that are used to track a client's progress over time.  These assessments may or may not be assigned to an assessment processor." .
+<urn:bitfocus:clarity:governance-model#Assessment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#BenefitsMedicaid
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <http://purl.org/dc/terms/identifier> "4.04.3" .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <http://www.w3.org/2000/01/rdf-schema#comment> "MEDICAID health insurance program" .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <http://www.w3.org/2000/01/rdf-schema#label> "BenefitsMedicaid" .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <http://www.w3.org/2000/01/rdf-schema#label> "MEDICAID" .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <urn:bitfocus:clarity:governance-model#hmisElementName> "Medicaid" .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#BenefitsMedicaid> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.benefits_medicaid" .
+# 
+# urn:bitfocus:clarity:governance-model#Client
+<urn:bitfocus:clarity:governance-model#Client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Client> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<urn:bitfocus:clarity:governance-model#Client> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents individuals whose information is stored in Clarity Human Services. The system allows for searching, viewing, editing, and managing client records, profiles, enrollments, services, assessments, and privacy settings (like Release of Information). The Client Model in Looker allows analysis across various client interactions."@en .
+<urn:bitfocus:clarity:governance-model#Client> <http://www.w3.org/2000/01/rdf-schema#label> "Client"@en .
+<urn:bitfocus:clarity:governance-model#Client> <urn:bitfocus:clarity:governance-model#looker> "Clients" .
+<urn:bitfocus:clarity:governance-model#Client> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#Client> <urn:bitfocus:clarity:governance-model#sql> "clients.*" .
+# 
+# urn:bitfocus:clarity:governance-model#CommunityQueue
+<urn:bitfocus:clarity:governance-model#CommunityQueue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#CommunityQueue> <http://www.w3.org/2000/01/rdf-schema#comment> "Community Queue allows communities to triage and prioritize client referrals across programs, agencies, and systems of care."@en .
+<urn:bitfocus:clarity:governance-model#CommunityQueue> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#CurrentLivingSituation
+<urn:bitfocus:clarity:governance-model#CurrentLivingSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#CurrentLivingSituation> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Disability
+<urn:bitfocus:clarity:governance-model#Disability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Disability> <http://purl.org/dc/terms/identifier> "4.05-4.10" .
+<urn:bitfocus:clarity:governance-model#Disability> <http://www.w3.org/2000/01/rdf-schema#label> "Disabilities " .
+<urn:bitfocus:clarity:governance-model#Disability> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#Disability> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Eligibility
+<urn:bitfocus:clarity:governance-model#Eligibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Eligibility> <http://www.w3.org/2000/01/rdf-schema#comment> "The Program Eligibility feature simplifies the referral process by allowing users to set up Eligibility requirements for a program. These requirements dictate which programs display as eligible for a client after you complete an assessment with Eligibility Engine enabled. " .
+<urn:bitfocus:clarity:governance-model#Eligibility> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Enrollment
+<urn:bitfocus:clarity:governance-model#Enrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Enrollment> <http://www.w3.org/2000/01/rdf-schema#label> "Enrollment" .
+<urn:bitfocus:clarity:governance-model#Enrollment> <urn:bitfocus:clarity:governance-model#looker> "Enrollments, Entry Screen,  Exit Screen,  Followup Screen, Status Screen" .
+<urn:bitfocus:clarity:governance-model#Enrollment> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#Enrollment> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.*" .
+<urn:bitfocus:clarity:governance-model#Enrollment> <urn:bitfocus:clarity:governance-model#sql> "client_programs.*" .
+# 
+# urn:bitfocus:clarity:governance-model#ExitDestination
+<urn:bitfocus:clarity:governance-model#ExitDestination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#ExitDestination> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#File
+<urn:bitfocus:clarity:governance-model#File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#File> <http://www.w3.org/2000/01/rdf-schema#comment> "Files can be uploaded under different categories, and attached at either the client proflie or program level." .
+<urn:bitfocus:clarity:governance-model#File> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Form
+<urn:bitfocus:clarity:governance-model#Form> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Form> <http://www.w3.org/2000/01/rdf-schema#comment> "Client Forms need to be enabled at the Agency and potentially Program level before use. Enabling forms allows them to be available in the client record's Files tab for completion and uploading." .
+<urn:bitfocus:clarity:governance-model#Form> <urn:bitfocus:clarity:governance-model#looker> "Clients / Client Files" .
+<urn:bitfocus:clarity:governance-model#Form> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#Form> <urn:bitfocus:clarity:governance-model#sql> "client_forms.*" .
+# 
+# urn:bitfocus:clarity:governance-model#Gender
+<urn:bitfocus:clarity:governance-model#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Gender> <http://purl.org/dc/terms/identifier> "3.06.1" .
+<urn:bitfocus:clarity:governance-model#Gender> <http://www.w3.org/2000/01/rdf-schema#label> "Gender" .
+<urn:bitfocus:clarity:governance-model#Gender> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#Gender> <urn:bitfocus:clarity:governance-model#hmisElementName> "Gender" .
+<urn:bitfocus:clarity:governance-model#Gender> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#Gender> <urn:bitfocus:clarity:governance-model#sql> "client_assessment_demographics.gender" .
+<urn:bitfocus:clarity:governance-model#Gender> <urn:bitfocus:clarity:governance-model#sql> "client_demographics.gender" .
+<urn:bitfocus:clarity:governance-model#Gender> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.gender" .
+# 
+# urn:bitfocus:clarity:governance-model#Geolocation
+<urn:bitfocus:clarity:governance-model#Geolocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Geolocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Geolocation is a field type to collected specific location data in the system." .
+<urn:bitfocus:clarity:governance-model#Geolocation> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Goal
+<urn:bitfocus:clarity:governance-model#Goal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Goal> <http://www.w3.org/2000/01/rdf-schema#comment> "Program Goals allow staff members to track whether a client accomplished a goal within an enrollment based on either demographic, service, or time-based data." .
+<urn:bitfocus:clarity:governance-model#Goal> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthChronic
+<urn:bitfocus:clarity:governance-model#HealthChronic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <http://purl.org/dc/terms/identifier> "4.07.2" .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <http://www.w3.org/2000/01/rdf-schema#comment> "HMIS Data Element 4.07 Chronic Health Condition" .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <http://www.w3.org/2000/01/rdf-schema#label> "Chronic Health Condition" .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <http://www.w3.org/2000/01/rdf-schema#label> "HealthChronic" .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <urn:bitfocus:clarity:governance-model#hmisElementName> "DisabilityResponseChronicHealthCondition" .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthChronic> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_chronic" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthDv
+<urn:bitfocus:clarity:governance-model#HealthDv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthDv> <http://purl.org/dc/terms/identifier> "4.11.2" .
+<urn:bitfocus:clarity:governance-model#HealthDv> <http://www.w3.org/2000/01/rdf-schema#comment> "If the person is a survivor of domestic violence." .
+<urn:bitfocus:clarity:governance-model#HealthDv> <http://www.w3.org/2000/01/rdf-schema#label> "HealthDv" .
+<urn:bitfocus:clarity:governance-model#HealthDv> <http://www.w3.org/2000/01/rdf-schema#label> "Survivor of Domestic Violence" .
+<urn:bitfocus:clarity:governance-model#HealthDv> <urn:bitfocus:clarity:governance-model#hmisElementName> "DomesticViolenceSurvivor" .
+<urn:bitfocus:clarity:governance-model#HealthDv> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthDv> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthDv> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_dv" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthDvFleeing
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <http://purl.org/dc/terms/identifier> "4.11.B" .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <http://www.w3.org/2000/01/rdf-schema#comment> "Are you currently fleeing domestic violence?" .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <http://www.w3.org/2000/01/rdf-schema#label> "Are you currently fleeing?" .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <http://www.w3.org/2000/01/rdf-schema#label> "HealthDvFleeing" .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <urn:bitfocus:clarity:governance-model#hmisElementName> "CurrentlyFleeing" .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthDvFleeing> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_dv_fleeing" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthDvOccurred
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <http://purl.org/dc/terms/identifier> "4.11.A" .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <http://www.w3.org/2000/01/rdf-schema#comment> "How long ago did the person have the most recent experience." .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <http://www.w3.org/2000/01/rdf-schema#label> "HealthDvOccurred" .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <http://www.w3.org/2000/01/rdf-schema#label> "When experience occurred" .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <urn:bitfocus:clarity:governance-model#hmisElementName> "WhenOccurred" .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthDvOccurred> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_dv_occurred" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthInsurance404
+<urn:bitfocus:clarity:governance-model#HealthInsurance404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthInsurance404> <http://purl.org/dc/terms/identifier> "4.04.*" .
+<urn:bitfocus:clarity:governance-model#HealthInsurance404> <http://www.w3.org/2000/01/rdf-schema#label> "Health Insurance" .
+<urn:bitfocus:clarity:governance-model#HealthInsurance404> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthInsurance404> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthMental
+<urn:bitfocus:clarity:governance-model#HealthMental> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthMental> <http://purl.org/dc/terms/identifier> "4.09.2" .
+<urn:bitfocus:clarity:governance-model#HealthMental> <http://www.w3.org/2000/01/rdf-schema#comment> "HMIS Data Element 4.09 Mental Health Disorder" .
+<urn:bitfocus:clarity:governance-model#HealthMental> <http://www.w3.org/2000/01/rdf-schema#label> "HealthMental" .
+<urn:bitfocus:clarity:governance-model#HealthMental> <http://www.w3.org/2000/01/rdf-schema#label> "Mental Health Disorder" .
+<urn:bitfocus:clarity:governance-model#HealthMental> <urn:bitfocus:clarity:governance-model#hmisElementName> "DisabilityResponseMentalHealthDisorder" .
+<urn:bitfocus:clarity:governance-model#HealthMental> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthMental> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthMental> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_mental" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthMentalLongterm
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <http://purl.org/dc/terms/identifier> "4.09.A" .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <http://www.w3.org/2000/01/rdf-schema#comment> "If the problem is expected to be of long-continued and indefinite duration and substantially impedes a client‚Äôs ability to live" .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <http://www.w3.org/2000/01/rdf-schema#label> "HealthMentalLongterm" .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <http://www.w3.org/2000/01/rdf-schema#label> "Long Term Mental Health Problem" .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <urn:bitfocus:clarity:governance-model#hmisElementName> "IndefiniteAndImpairsMentalHealthDisorder" .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthMentalLongterm> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_mental_longterm" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthPregnancy
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <http://purl.org/dc/terms/identifier> "R10.1" .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <http://www.w3.org/2000/01/rdf-schema#comment> "HMIS Data Element R10 Pregnancy Status collected on RHY client Program Enrollment and Update screens" .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <http://www.w3.org/2000/01/rdf-schema#label> "HealthPregnancy" .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <http://www.w3.org/2000/01/rdf-schema#label> "Pregnancy Status" .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <urn:bitfocus:clarity:governance-model#hmisElementName> "PregnancyStatus" .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthPregnancy> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_pregnancy" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <http://purl.org/dc/terms/identifier> "4.10.2" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <http://www.w3.org/2000/01/rdf-schema#comment> "If the client has an alcohol or drug use disorder or both." .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <http://www.w3.org/2000/01/rdf-schema#label> "HealthSubstanceAbuse" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <http://www.w3.org/2000/01/rdf-schema#label> "Substance Use Disorder" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <urn:bitfocus:clarity:governance-model#hmisElementName> "DisabilityResponseSubstanceUseDisorder" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_substance_abuse" .
+# 
+# urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <http://purl.org/dc/terms/identifier> "4.10.A" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <http://www.w3.org/2000/01/rdf-schema#comment> "If the problem is expected to be of long, continued and indefinite duration and substantially impedes a clients ability to live independently" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <http://www.w3.org/2000/01/rdf-schema#label> "HealthSubstanceAbuseLongterm" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <http://www.w3.org/2000/01/rdf-schema#label> "Long Term Substance Abuse Problem" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <urn:bitfocus:clarity:governance-model#hmisElementName> "IndefiniteAndImpairsSubstanceUseDisorder" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Enrollment> .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.health_substance_abuse_longterm" .
+# 
+# urn:bitfocus:clarity:governance-model#NameSuffix
+<urn:bitfocus:clarity:governance-model#NameSuffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <http://purl.org/dc/terms/identifier> "3.01.4" .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <http://www.w3.org/2000/01/rdf-schema#comment> "Suffix" .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <http://www.w3.org/2000/01/rdf-schema#label> "NameSuffix" .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <http://www.w3.org/2000/01/rdf-schema#label> "Suffix" .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <urn:bitfocus:clarity:governance-model#hmisElementName> "NameSuffix" .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#NameSuffix> <urn:bitfocus:clarity:governance-model#sql> "client_demographics.name_suffix" .
+# 
+# urn:bitfocus:clarity:governance-model#PriorLivingSituation
+<urn:bitfocus:clarity:governance-model#PriorLivingSituation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#PriorLivingSituation> <http://www.w3.org/2000/01/rdf-schema#comment> "HMIS Data Element 3.917: Prior Living Situation fields in collaboration with 3.08 Disabling Condition are utilized to calculate a client's Chronic Homeless status. Chronic Homelessness is defined as experiencing literal homelessness for 12+ consecutive months, or 4+ episodes adding up to 12+ months over the past 3 years, and having a disabling condition. " .
+<urn:bitfocus:clarity:governance-model#PriorLivingSituation> <http://www.w3.org/2000/01/rdf-schema#label> "Prior Living Situation" .
+<urn:bitfocus:clarity:governance-model#PriorLivingSituation> <urn:bitfocus:clarity:governance-model#looker> "Client Model: Entry Screen - Prior Living Situation; HMIS Performance: Entry Screen - Prior Living Situation; Coordinated Entry: Entry Screen - Prior Living Situation" .
+<urn:bitfocus:clarity:governance-model#PriorLivingSituation> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#PriorResidence
+<urn:bitfocus:clarity:governance-model#PriorResidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#PriorResidence> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Program
+<urn:bitfocus:clarity:governance-model#Program> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Program> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<urn:bitfocus:clarity:governance-model#Program> <http://purl.org/dc/elements/1.1/description> ""@en .
+<urn:bitfocus:clarity:governance-model#Program> <http://www.w3.org/2000/01/rdf-schema#comment> "Clarity Programs are equivalent to the HMIS Project." .
+<urn:bitfocus:clarity:governance-model#Program> <http://www.w3.org/2000/01/rdf-schema#label> "Program" .
+<urn:bitfocus:clarity:governance-model#Program> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Referral
+<urn:bitfocus:clarity:governance-model#Referral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Referral> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of directing a client to a program or Community Queue for services or housing. Referrals have statuses (Pending, Denied, Expired, Completed), can be assigned case managers or navigators, and involve tracking eligibility, priority, and history. Referral Settings allow administrators to customize the process."@en .
+<urn:bitfocus:clarity:governance-model#Referral> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#ReferralStatus
+<urn:bitfocus:clarity:governance-model#ReferralStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#ReferralStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the current state of a referral (Pending, Pending - In Process, Denied, Expired, Completed) and impacts where it displays. It communicates acceptance, processing stage, or expiration/denial. Status can be updated based on user actions or system settings like expiration thresholds."@en .
+<urn:bitfocus:clarity:governance-model#ReferralStatus> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Service
+<urn:bitfocus:clarity:governance-model#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Service> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceExpense
+<urn:bitfocus:clarity:governance-model#ServiceExpense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#ServiceExpense> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceItem
+<urn:bitfocus:clarity:governance-model#ServiceItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#ServiceItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <urn:bitfocus:clarity:governance-model#Service> .
+<urn:bitfocus:clarity:governance-model#ServiceItem> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceProvision
+<urn:bitfocus:clarity:governance-model#ServiceProvision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#ServiceProvision> <http://www.w3.org/2000/01/rdf-schema#label> "Service Provision" .
+<urn:bitfocus:clarity:governance-model#ServiceProvision> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#ServiceProvision> <urn:bitfocus:clarity:governance-model#sql> "client_services.*" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceTaxonomy
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#ServiceTaxonomy> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#ServiceTimeTracking
+<urn:bitfocus:clarity:governance-model#ServiceTimeTracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#ServiceTimeTracking> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#Sex
+<urn:bitfocus:clarity:governance-model#Sex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Sex> <http://purl.org/dc/terms/identifier> "4.21.1 Sex" .
+<urn:bitfocus:clarity:governance-model#Sex> <http://www.w3.org/2000/01/rdf-schema#label> "Sex" .
+<urn:bitfocus:clarity:governance-model#Sex> <urn:bitfocus:clarity:governance-model#classification> "non-sensitive" .
+<urn:bitfocus:clarity:governance-model#Sex> <urn:bitfocus:clarity:governance-model#hmisElementName> "Sex" .
+<urn:bitfocus:clarity:governance-model#Sex> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#Sex> <urn:bitfocus:clarity:governance-model#sql> "client_assessment_demographics.sex" .
+<urn:bitfocus:clarity:governance-model#Sex> <urn:bitfocus:clarity:governance-model#sql> "client_demographics.sex" .
+<urn:bitfocus:clarity:governance-model#Sex> <urn:bitfocus:clarity:governance-model#sql> "client_program_demographics.sex" .
+# 
+# urn:bitfocus:clarity:governance-model#Veteran
+<urn:bitfocus:clarity:governance-model#Veteran> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:bitfocus:clarity:governance-model#Veteran> <http://purl.org/dc/terms/identifier> "3.07.1" .
+<urn:bitfocus:clarity:governance-model#Veteran> <http://www.w3.org/2000/01/rdf-schema#comment> "A veteran is someone who has served on active duty in the Armed Forces of the United States. This does not include inactive mili" .
+<urn:bitfocus:clarity:governance-model#Veteran> <http://www.w3.org/2000/01/rdf-schema#label> "Veteran Status" .
+<urn:bitfocus:clarity:governance-model#Veteran> <urn:bitfocus:clarity:governance-model#hmisElementName> "VeteranStatus" .
+<urn:bitfocus:clarity:governance-model#Veteran> <urn:bitfocus:clarity:governance-model#isPartOfScreen> <urn:bitfocus:clarity:governance-model#Client> .
+<urn:bitfocus:clarity:governance-model#Veteran> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+<urn:bitfocus:clarity:governance-model#Veteran> <urn:bitfocus:clarity:governance-model#sql> "client_demographics.veteran" .
+# 
+# urn:hud:hmis:owl#Assessment
+<urn:hud:hmis:owl#Assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:hud:hmis:owl#Assessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <urn:bitfocus:clarity:governance-model#Assessment> .
+# 
+# urn:hud:hmis:owl#Client
+<urn:hud:hmis:owl#Client> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:hud:hmis:owl#Client> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <urn:bitfocus:clarity:governance-model#Client> .
+# 
+# urn:hud:hmis:owl#Enrollment
+<urn:hud:hmis:owl#Enrollment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:hud:hmis:owl#Enrollment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <urn:bitfocus:clarity:governance-model#Enrollment> .
+# 
+# urn:hud:hmis:owl#Project
+<urn:hud:hmis:owl#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<urn:hud:hmis:owl#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <urn:bitfocus:clarity:governance-model#Program> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215
+<urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#CurrentLivingSituation> .
+<urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#ExitDestination> .
+<urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#PriorResidence> .
+<urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215> <http://www.w3.org/2000/01/rdf-schema#label> "Foster care home or foster care group home" .
+<urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215> <http://www.w3.org/2004/02/skos/core#notation> "215"^^<http://www.w3.org/2001/XMLSchema#token> .
+<urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206
+<urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#CurrentLivingSituation> .
+<urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#ExitDestination> .
+<urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#PriorResidence> .
+<urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206> <http://www.w3.org/2000/01/rdf-schema#label> "Hospital or other residential non-psychiatric medical facility" .
+<urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206> <http://www.w3.org/2004/02/skos/core#notation> "206"^^<http://www.w3.org/2001/XMLSchema#token> .
+<urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207
+<urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#CurrentLivingSituation> .
+<urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#ExitDestination> .
+<urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#PriorResidence> .
+<urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207> <http://www.w3.org/2000/01/rdf-schema#label> "Jail, prison, or juvenile detention facility" .
+<urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207> <http://www.w3.org/2004/02/skos/core#notation> "207"^^<http://www.w3.org/2001/XMLSchema#token> .
+<urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204
+<urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#CurrentLivingSituation> .
+<urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#ExitDestination> .
+<urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#PriorResidence> .
+<urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204> <http://www.w3.org/2000/01/rdf-schema#label> "Psychiatric hospital or other psychiatric facility" .
+<urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204> <http://www.w3.org/2004/02/skos/core#notation> "204"^^<http://www.w3.org/2001/XMLSchema#token> .
+<urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#SafeHaven_118
+<urn:bitfocus:clarity:governance-model#SafeHaven_118> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:bitfocus:clarity:governance-model#SafeHaven_118> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#CurrentLivingSituation> .
+<urn:bitfocus:clarity:governance-model#SafeHaven_118> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#ExitDestination> .
+<urn:bitfocus:clarity:governance-model#SafeHaven_118> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#PriorResidence> .
+<urn:bitfocus:clarity:governance-model#SafeHaven_118> <http://www.w3.org/2000/01/rdf-schema#label> "Safe Haven" .
+<urn:bitfocus:clarity:governance-model#SafeHaven_118> <http://www.w3.org/2004/02/skos/core#notation> "118"^^<http://www.w3.org/2001/XMLSchema#token> .
+<urn:bitfocus:clarity:governance-model#SafeHaven_118> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302
+<urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#CurrentLivingSituation> .
+<urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#ExitDestination> .
+<urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <urn:bitfocus:clarity:governance-model#PriorResidence> .
+<urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302> <http://www.w3.org/2000/01/rdf-schema#label> "Transitional housing for homeless persons (including homeless youth)" .
+<urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302> <http://www.w3.org/2004/02/skos/core#notation> "302"^^<http://www.w3.org/2001/XMLSchema#token> .
+<urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302> <urn:bitfocus:clarity:governance-model#modelSet> "housing-payment" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

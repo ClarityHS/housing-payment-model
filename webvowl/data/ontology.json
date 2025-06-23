@@ -1,0 +1,3295 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "urn:bitfocus:clarity:governance-model", "http://www.w3.org/2000/01/rdf-schema", "urn:hud:hmis:owl", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "undefined" : "Bitfocus Clarity Housing Payment Model"
+    },
+    "iri" : "urn:bitfocus:clarity:governance-model#",
+    "version" : "v1.0.0",
+    "author" : [ "O'Sullivan, Jim ; Bianchi, Lauren ; Warren, John ; Jahn, Eric" ],
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "O'Sullivan, Jim ; Bianchi, Lauren ; Warren, John ; Jahn, Eric",
+        "type" : "label"
+      } ],
+      "language" : [ {
+        "identifier" : "language",
+        "language" : "undefined",
+        "value" : "en-US",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "v1.0.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "Bitfocus Clarity Housing Payment Model",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "98",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "urn:bitfocus:clarity:governance-model#PriorLivingSituation",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "looker" : [ {
+        "identifier" : "looker",
+        "language" : "undefined",
+        "value" : "Client Model: Entry Screen - Prior Living Situation; HMIS Performance: Entry Screen - Prior Living Situation; Coordinated Entry: Entry Screen - Prior Living Situation",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PriorLivingSituation",
+      "undefined" : "Prior Living Situation"
+    },
+    "comment" : {
+      "undefined" : "HMIS Data Element 3.917: Prior Living Situation fields in collaboration with 3.08 Disabling Condition are utilized to calculate a client's Chronic Homeless status. Chronic Homelessness is defined as experiencing literal homelessness for 12+ consecutive months, or 4+ episodes adding up to 12+ months over the past 3 years, and having a disabling condition. "
+    },
+    "id" : "0"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#CommunityQueue",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CommunityQueue"
+    },
+    "comment" : {
+      "en" : "Community Queue allows communities to triage and prioritize client referrals across programs, agencies, and systems of care."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "urn:hud:hmis:owl#Client",
+    "baseIri" : "urn:hud:hmis:owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Client"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.10.A",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "IndefiniteAndImpairsSubstanceUseDisorder",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_substance_abuse_longterm",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthSubstanceAbuseLongterm",
+      "undefined" : "HealthSubstanceAbuseLongterm"
+    },
+    "comment" : {
+      "undefined" : "If the problem is expected to be of long, continued and indefinite duration and substantially impedes a clients ability to live independently"
+    },
+    "id" : "12"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Service",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Service"
+    },
+    "subClasses" : [ "14" ],
+    "id" : "13"
+  }, {
+    "iri" : "urn:hud:hmis:owl#Enrollment",
+    "baseIri" : "urn:hud:hmis:owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Enrollment"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Sex",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.21.1 Sex",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "Sex",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_demographics.sex",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.sex",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_assessment_demographics.sex",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sex",
+      "undefined" : "Sex"
+    },
+    "id" : "23"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.10.2",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "DisabilityResponseSubstanceUseDisorder",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_substance_abuse",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthSubstanceAbuse",
+      "undefined" : "Substance Use Disorder"
+    },
+    "comment" : {
+      "undefined" : "If the client has an alcohol or drug use disorder or both."
+    },
+    "id" : "24"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#CurrentLivingSituation",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "CurrentLivingSituation"
+    },
+    "individuals" : [ {
+      "iri" : "urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "302",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302",
+        "undefined" : "Transitional housing for homeless persons (including homeless youth)"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "204",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PsychiatricHospitalOrOtherPsychiatricFacility_204",
+        "undefined" : "Psychiatric hospital or other psychiatric facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "215",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FosterCareHomeOrFosterCareGroupHome_215",
+        "undefined" : "Foster care home or foster care group home"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "206",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+        "undefined" : "Hospital or other residential non-psychiatric medical facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "207",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "JailPrisonOrJuvenileDetentionFacility_207",
+        "undefined" : "Jail, prison, or juvenile detention facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#SafeHaven_118",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "118",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SafeHaven_118",
+        "undefined" : "Safe Haven"
+      }
+    } ],
+    "id" : "25"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthPregnancy",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "R10.1",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "PregnancyStatus",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_pregnancy",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthPregnancy",
+      "undefined" : "Pregnancy Status"
+    },
+    "comment" : {
+      "undefined" : "HMIS Data Element R10 Pregnancy Status collected on RHY client Program Enrollment and Update screens"
+    },
+    "id" : "28"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Goal",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Goal"
+    },
+    "comment" : {
+      "undefined" : "Program Goals allow staff members to track whether a client accomplished a goal within an enrollment based on either demographic, service, or time-based data."
+    },
+    "id" : "30"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthInsurance404",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.04.*",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthInsurance404",
+      "undefined" : "Health Insurance"
+    },
+    "id" : "31"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Veteran",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "3.07.1",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "VeteranStatus",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Client",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_demographics.veteran",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Veteran",
+      "undefined" : "Veteran Status"
+    },
+    "comment" : {
+      "undefined" : "A veteran is someone who has served on active duty in the Armed Forces of the United States. This does not include inactive mili"
+    },
+    "id" : "39"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#PriorResidence",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PriorResidence"
+    },
+    "individuals" : [ {
+      "iri" : "urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "302",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302",
+        "undefined" : "Transitional housing for homeless persons (including homeless youth)"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "204",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PsychiatricHospitalOrOtherPsychiatricFacility_204",
+        "undefined" : "Psychiatric hospital or other psychiatric facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "206",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+        "undefined" : "Hospital or other residential non-psychiatric medical facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "215",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FosterCareHomeOrFosterCareGroupHome_215",
+        "undefined" : "Foster care home or foster care group home"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "207",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "JailPrisonOrJuvenileDetentionFacility_207",
+        "undefined" : "Jail, prison, or juvenile detention facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#SafeHaven_118",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "118",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SafeHaven_118",
+        "undefined" : "Safe Haven"
+      }
+    } ],
+    "id" : "42"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthDvOccurred",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.11.A",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "WhenOccurred",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_dv_occurred",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthDvOccurred",
+      "undefined" : "HealthDvOccurred"
+    },
+    "comment" : {
+      "undefined" : "How long ago did the person have the most recent experience."
+    },
+    "id" : "43"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthDvFleeing",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.11.B",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "CurrentlyFleeing",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_dv_fleeing",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthDvFleeing",
+      "undefined" : "HealthDvFleeing"
+    },
+    "comment" : {
+      "undefined" : "Are you currently fleeing domestic violence?"
+    },
+    "id" : "48"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Enrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "looker" : [ {
+        "identifier" : "looker",
+        "language" : "undefined",
+        "value" : "Enrollments, Entry Screen,  Exit Screen,  Followup Screen, Status Screen",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.*",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_programs.*",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Enrollment",
+      "undefined" : "Enrollment"
+    },
+    "subClasses" : [ "22" ],
+    "id" : "3"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ExitDestination",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ExitDestination"
+    },
+    "individuals" : [ {
+      "iri" : "urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "302",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302",
+        "undefined" : "Transitional housing for homeless persons (including homeless youth)"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "206",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+        "undefined" : "Hospital or other residential non-psychiatric medical facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "215",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FosterCareHomeOrFosterCareGroupHome_215",
+        "undefined" : "Foster care home or foster care group home"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "204",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PsychiatricHospitalOrOtherPsychiatricFacility_204",
+        "undefined" : "Psychiatric hospital or other psychiatric facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "207",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "JailPrisonOrJuvenileDetentionFacility_207",
+        "undefined" : "Jail, prison, or juvenile detention facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#SafeHaven_118",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "118",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SafeHaven_118",
+        "undefined" : "Safe Haven"
+      }
+    } ],
+    "id" : "56"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Gender",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "3.06.1",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "Gender",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_demographics.gender",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.gender",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_assessment_demographics.gender",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Gender",
+      "undefined" : "Gender"
+    },
+    "id" : "57"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceItem",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceItem"
+    },
+    "id" : "14",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#File",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "File"
+    },
+    "comment" : {
+      "undefined" : "Files can be uploaded under different categories, and attached at either the client proflie or program level."
+    },
+    "id" : "58"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Referral",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Referral"
+    },
+    "comment" : {
+      "en" : "The process of directing a client to a program or Community Queue for services or housing. Referrals have statuses (Pending, Denied, Expired, Completed), can be assigned case managers or navigators, and involve tracking eligibility, priority, and history. Referral Settings allow administrators to customize the process."
+    },
+    "id" : "17"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthChronic",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.07.2",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "DisabilityResponseChronicHealthCondition",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_chronic",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthChronic",
+      "undefined" : "HealthChronic"
+    },
+    "comment" : {
+      "undefined" : "HMIS Data Element 4.07 Chronic Health Condition"
+    },
+    "id" : "19"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceExpense",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceExpense"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ReferralStatus",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ReferralStatus"
+    },
+    "comment" : {
+      "en" : "Indicates the current state of a referral (Pending, Pending - In Process, Denied, Expired, Completed) and impacts where it displays. It communicates acceptance, processing stage, or expiration/denial. Status can be updated based on user actions or system settings like expiration thresholds."
+    },
+    "id" : "66"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#BenefitsMedicaid",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.04.3",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "Medicaid",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.benefits_medicaid",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BenefitsMedicaid",
+      "undefined" : "MEDICAID"
+    },
+    "comment" : {
+      "undefined" : "MEDICAID health insurance program"
+    },
+    "id" : "81"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceTaxonomy",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceTaxonomy"
+    },
+    "id" : "60"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Form",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "looker" : [ {
+        "identifier" : "looker",
+        "language" : "undefined",
+        "value" : "Clients / Client Files",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_forms.*",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Form"
+    },
+    "comment" : {
+      "undefined" : "Client Forms need to be enabled at the Agency and potentially Program level before use. Enabling forms allows them to be available in the client record's Files tab for completion and uploading."
+    },
+    "id" : "72"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Assessment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Assessment"
+    },
+    "subClasses" : [ "45" ],
+    "comment" : {
+      "undefined" : "An assessment is a group of questions displayed on a screen that are used to track a client's progress over time.  These assessments may or may not be assigned to an assessment processor."
+    },
+    "id" : "27"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceTimeTracking",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceTimeTracking"
+    },
+    "id" : "74"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Eligibility",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Eligibility"
+    },
+    "comment" : {
+      "undefined" : "The Program Eligibility feature simplifies the referral process by allowing users to set up Eligibility requirements for a program. These requirements dictate which programs display as eligible for a client after you complete an assessment with Eligibility Engine enabled. "
+    },
+    "id" : "92"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Client",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "looker" : [ {
+        "identifier" : "looker",
+        "language" : "undefined",
+        "value" : "Clients",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "clients.*",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Client",
+      "en" : "Client"
+    },
+    "subClasses" : [ "8" ],
+    "comment" : {
+      "en" : "Represents individuals whose information is stored in Clarity Human Services. The system allows for searching, viewing, editing, and managing client records, profiles, enrollments, services, assessments, and privacy settings (like Release of Information). The Client Model in Looker allows analysis across various client interactions."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceProvision",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_services.*",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceProvision",
+      "undefined" : "Service Provision"
+    },
+    "id" : "35"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthMentalLongterm",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.09.A",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "IndefiniteAndImpairsMentalHealthDisorder",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_mental_longterm",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthMentalLongterm",
+      "undefined" : "HealthMentalLongterm"
+    },
+    "comment" : {
+      "undefined" : "If the problem is expected to be of long-continued and indefinite duration and substantially impedes a client‚Äôs ability to live"
+    },
+    "id" : "76"
+  }, {
+    "iri" : "urn:hud:hmis:owl#Project",
+    "baseIri" : "urn:hud:hmis:owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Project"
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "urn:hud:hmis:owl#Assessment",
+    "baseIri" : "urn:hud:hmis:owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Assessment"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "98",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "64",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthDv",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.11.2",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "DomesticViolenceSurvivor",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_dv",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthDv",
+      "undefined" : "HealthDv"
+    },
+    "comment" : {
+      "undefined" : "If the person is a survivor of domestic violence."
+    },
+    "id" : "52"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Geolocation",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Geolocation"
+    },
+    "comment" : {
+      "undefined" : "Geolocation is a field type to collected specific location data in the system."
+    },
+    "id" : "104"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#HealthMental",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.09.2",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "DisabilityResponseMentalHealthDisorder",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.health_mental",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "HealthMental",
+      "undefined" : "HealthMental"
+    },
+    "comment" : {
+      "undefined" : "HMIS Data Element 4.09 Mental Health Disorder"
+    },
+    "id" : "62"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#NameSuffix",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "3.01.4",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "NameSuffix",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Client",
+        "type" : "iri"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_demographics.name_suffix",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NameSuffix",
+      "undefined" : "NameSuffix"
+    },
+    "comment" : {
+      "undefined" : "Suffix"
+    },
+    "id" : "11"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Program",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "description" : { },
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Program",
+      "undefined" : "Program"
+    },
+    "subClasses" : [ "33" ],
+    "comment" : {
+      "undefined" : "Clarity Programs are equivalent to the HMIS Project."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Disability",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "instances" : 0,
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "4.05-4.10",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "isPartOfScreen" : [ {
+        "identifier" : "isPartOfScreen",
+        "language" : "undefined",
+        "value" : "urn:bitfocus:clarity:governance-model#Enrollment",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Disability",
+      "undefined" : "Disabilities "
+    },
+    "id" : "21"
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "99",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "109",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "111",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasProgramEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "3",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProgramEnrollment"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "1"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceExpenseNotes",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "6",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_service_expenses.notes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceExpenseNotes",
+      "undefined" : "notes"
+    },
+    "domain" : "5",
+    "attributes" : [ "datatype" ],
+    "id" : "4"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#nameSuffixToClient",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "11",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "nameSuffixToClient"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "3",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEnrollment"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#referralHasReplacement",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "17",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "referralHasReplacement"
+    },
+    "domain" : "17",
+    "attributes" : [ "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthChronicToEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "19",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthChronicToEnrollment"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "12",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthSubstanceAbuseLongtermToDisability"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "27",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEnrollmentAssessment"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "28",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthPregnancyToEnrollment"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "29"
+  }, {
+    "range" : "2",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceProvisionNotes",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "36",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_service_notes.notes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceProvisionNotes",
+      "undefined" : "notes"
+    },
+    "domain" : "35",
+    "attributes" : [ "datatype" ],
+    "id" : "34"
+  }, {
+    "range" : "3",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "13",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "25",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "enrollmentHasCurrentLivingSituation"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "40"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "41"
+  }, {
+    "range" : "27",
+    "domain" : "45",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "44"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "24",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthSubstanceAbuseToDisability"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthDvToEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "52",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthDvToEnrollment"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "43",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthDvOccurredToEnrollment"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#FirstName",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "55",
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "3.01.1",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "FirstName",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "PII",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "members.first_name",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "clients.first_name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FirstName",
+      "undefined" : "First Name"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype" ],
+    "id" : "54"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "60",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "serviceTaxonomyToServiceItem"
+    },
+    "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthMentalToDisability",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "62",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthMentalToDisability"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "64",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "taxonomy.code",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceTaxonomyCode",
+      "undefined" : "code"
+    },
+    "domain" : "60",
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasReferralStatus",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "66",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasReferralStatus"
+    },
+    "domain" : "17",
+    "attributes" : [ "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "0",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "enrollmentHasPriorLivingSituation"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#OtherTribeSpecify",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "69",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.other_tribe_specify",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_demographics.other_tribe_specify",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_assessment_demographics.other_tribe_specify",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OtherTribeSpecify",
+      "undefined" : "Specify Other Tribe"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "A dependent field of Federally Recognized Tribe to allow additional data entry when a client is affiliated with a tribal entity not within the federally recognized tribes list."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "68"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasReferral",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "17",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasReferral"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#enrollmentHasForms",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "72",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "enrollmentHasForms"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "71"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "74",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "serviceProvisionToServiceTimeTracking"
+    },
+    "domain" : "35",
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "76",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthMentalLongtermToDisability"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "75"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceCountDays",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "78",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_service_notification_info.count_days",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceCountDays",
+      "undefined" : "count_days"
+    },
+    "domain" : "13",
+    "attributes" : [ "datatype" ],
+    "id" : "77"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "30",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "enrollmentAchievedGoal"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "35",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "serviceItemToServiceProvision"
+    },
+    "domain" : "14",
+    "attributes" : [ "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#veteranToClient",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "39",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "veteranToClient"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "82"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasFile",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "58",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFile"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#BirthDate",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "85",
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "3.03.1",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "DOB",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      }, {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "PII",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "clients.birth_date",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BirthDate",
+      "undefined" : "Date of Birth"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "Clients birth date"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#referralHasQueue",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "7",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "referralHasQueue"
+    },
+    "domain" : "17",
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#clientHasForm",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "72",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "clientHasForm"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "87"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "81",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "benefitsMedicaidToHealthInsurance404"
+    },
+    "domain" : "31",
+    "attributes" : [ "object" ],
+    "id" : "88"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "42",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "priorResidenceToPriorLivingSituation"
+    },
+    "domain" : "0",
+    "attributes" : [ "object" ],
+    "id" : "89"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#formHasFile",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "58",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "formHasFile"
+    },
+    "domain" : "72",
+    "attributes" : [ "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "48",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthDvFleeingToEnrollment"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#clientHasBiologicalSex",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "23",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "clientHasBiologicalSex"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "93"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#MiddleName",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "95",
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "3.01.2",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "MiddleName",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_demographics.name_middle",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.name_middle",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_assessment_demographics.name_middle",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MiddleName",
+      "undefined" : "Middle Name"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype" ],
+    "id" : "94"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#programHasEligibility",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "92",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "programHasEligibility"
+    },
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "96"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#Ssn",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "49",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "PII",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Ssn"
+    },
+    "domain" : "9",
+    "comment" : {
+      "undefined" : "HMIS Data Standards Element 3.02"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "97"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasClientAssessment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "27",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasClientAssessment"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#healthChronicToDisability",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "19",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "healthChronicToDisability"
+    },
+    "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasEnrollmentService",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "35",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEnrollmentService"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "102"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "50",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_service_time_tracking.tracking_minute",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceTimeTrackingTrackingMinute",
+      "undefined" : "tracking_minute"
+    },
+    "domain" : "74",
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#LastName",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "98",
+    "annotations" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "3.01.3",
+        "type" : "label"
+      } ],
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "hmisElementName" : [ {
+        "identifier" : "hmisElementName",
+        "language" : "undefined",
+        "value" : "LastName",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "PII",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "clients.last_name",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LastName",
+      "undefined" : "Last Name"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype" ],
+    "id" : "105"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "47",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_service_time_tracking.tracking_hour",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ServiceTimeTrackingTrackingHour",
+      "undefined" : "tracking_hour"
+    },
+    "domain" : "74",
+    "attributes" : [ "datatype" ],
+    "id" : "106"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "56",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "exitDestinationToEnrollment"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "107"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#serviceItemHasExpense",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "5",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "serviceItemHasExpense"
+    },
+    "domain" : "35",
+    "attributes" : [ "object" ],
+    "id" : "108"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#hasStandaloneService",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "35",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasStandaloneService"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "109"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "31",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "enrollmenthasHealthInsurance404"
+    },
+    "domain" : "3",
+    "attributes" : [ "object" ],
+    "id" : "110"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#referralHasAssessment",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "27",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "referralHasAssessment"
+    },
+    "domain" : "17",
+    "attributes" : [ "object" ],
+    "id" : "111"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#clientHasGender",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "57",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "clientHasGender"
+    },
+    "domain" : "9",
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "101",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ],
+      "classification" : [ {
+        "identifier" : "classification",
+        "language" : "undefined",
+        "value" : "non-sensitive",
+        "type" : "label"
+      } ],
+      "sql" : [ {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_demographics.federally_recognized_tribe",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_assessment_demographics.federally_recognized_tribe",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
+        "value" : "client_program_demographics.federally_recognized_tribe",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FederallyRecognizedTribe",
+      "undefined" : "Federally Recognized Tribe"
+    },
+    "domain" : "9",
+    "attributes" : [ "datatype" ],
+    "id" : "113"
+  } ]
+}
