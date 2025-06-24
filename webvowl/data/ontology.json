@@ -74,7 +74,7 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
+    "id" : "40",
     "type" : "owl:Class"
   }, {
     "id" : "42",
@@ -125,7 +125,7 @@
     "id" : "81",
     "type" : "owl:Class"
   }, {
-    "id" : "60",
+    "id" : "62",
     "type" : "owl:Class"
   }, {
     "id" : "72",
@@ -146,10 +146,10 @@
     "id" : "35",
     "type" : "owl:Class"
   }, {
-    "id" : "76",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "76",
     "type" : "owl:Class"
   }, {
     "id" : "45",
@@ -191,7 +191,7 @@
     "id" : "104",
     "type" : "owl:Class"
   }, {
-    "id" : "62",
+    "id" : "60",
     "type" : "owl:Class"
   }, {
     "id" : "11",
@@ -361,17 +361,17 @@
       "sql" : [ {
         "identifier" : "sql",
         "language" : "undefined",
+        "value" : "client_assessment_demographics.sex",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
         "value" : "client_demographics.sex",
         "type" : "label"
       }, {
         "identifier" : "sql",
         "language" : "undefined",
         "value" : "client_program_demographics.sex",
-        "type" : "label"
-      }, {
-        "identifier" : "sql",
-        "language" : "undefined",
-        "value" : "client_assessment_demographics.sex",
         "type" : "label"
       } ]
     },
@@ -418,7 +418,7 @@
     },
     "label" : {
       "IRI-based" : "HealthSubstanceAbuse",
-      "undefined" : "Substance Use Disorder"
+      "undefined" : "HealthSubstanceAbuse"
     },
     "comment" : {
       "undefined" : "If the client has an alcohol or drug use disorder or both."
@@ -605,7 +605,7 @@
     },
     "label" : {
       "IRI-based" : "HealthPregnancy",
-      "undefined" : "Pregnancy Status"
+      "undefined" : "HealthPregnancy"
     },
     "comment" : {
       "undefined" : "HMIS Data Element R10 Pregnancy Status collected on RHY client Program Enrollment and Update screens"
@@ -702,7 +702,7 @@
     "comment" : {
       "undefined" : "A veteran is someone who has served on active duty in the Armed Forces of the United States. This does not include inactive mili"
     },
-    "id" : "39"
+    "id" : "40"
   }, {
     "iri" : "urn:bitfocus:clarity:governance-model#PriorResidence",
     "baseIri" : "urn:bitfocus:clarity:governance-model",
@@ -740,27 +740,6 @@
         "undefined" : "Transitional housing for homeless persons (including homeless youth)"
       }
     }, {
-      "iri" : "urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204",
-      "baseIri" : "urn:bitfocus:clarity:governance-model",
-      "annotations" : {
-        "modelSet" : [ {
-          "identifier" : "modelSet",
-          "language" : "undefined",
-          "value" : "housing-payment",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "204",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "PsychiatricHospitalOrOtherPsychiatricFacility_204",
-        "undefined" : "Psychiatric hospital or other psychiatric facility"
-      }
-    }, {
       "iri" : "urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
       "baseIri" : "urn:bitfocus:clarity:governance-model",
       "annotations" : {
@@ -780,6 +759,27 @@
       "labels" : {
         "IRI-based" : "HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
         "undefined" : "Hospital or other residential non-psychiatric medical facility"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "204",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PsychiatricHospitalOrOtherPsychiatricFacility_204",
+        "undefined" : "Psychiatric hospital or other psychiatric facility"
       }
     }, {
       "iri" : "urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215",
@@ -1027,27 +1027,6 @@
         "undefined" : "Transitional housing for homeless persons (including homeless youth)"
       }
     }, {
-      "iri" : "urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
-      "baseIri" : "urn:bitfocus:clarity:governance-model",
-      "annotations" : {
-        "modelSet" : [ {
-          "identifier" : "modelSet",
-          "language" : "undefined",
-          "value" : "housing-payment",
-          "type" : "label"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "206",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
-        "undefined" : "Hospital or other residential non-psychiatric medical facility"
-      }
-    }, {
       "iri" : "urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215",
       "baseIri" : "urn:bitfocus:clarity:governance-model",
       "annotations" : {
@@ -1067,6 +1046,27 @@
       "labels" : {
         "IRI-based" : "FosterCareHomeOrFosterCareGroupHome_215",
         "undefined" : "Foster care home or foster care group home"
+      }
+    }, {
+      "iri" : "urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+      "baseIri" : "urn:bitfocus:clarity:governance-model",
+      "annotations" : {
+        "modelSet" : [ {
+          "identifier" : "modelSet",
+          "language" : "undefined",
+          "value" : "housing-payment",
+          "type" : "label"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "206",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206",
+        "undefined" : "Hospital or other residential non-psychiatric medical facility"
       }
     }, {
       "iri" : "urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204",
@@ -1165,12 +1165,12 @@
       "sql" : [ {
         "identifier" : "sql",
         "language" : "undefined",
-        "value" : "client_demographics.gender",
+        "value" : "client_program_demographics.gender",
         "type" : "label"
       }, {
         "identifier" : "sql",
         "language" : "undefined",
-        "value" : "client_program_demographics.gender",
+        "value" : "client_demographics.gender",
         "type" : "label"
       }, {
         "identifier" : "sql",
@@ -1377,7 +1377,7 @@
     "label" : {
       "IRI-based" : "ServiceTaxonomy"
     },
-    "id" : "60"
+    "id" : "62"
   }, {
     "iri" : "urn:bitfocus:clarity:governance-model#Form",
     "baseIri" : "urn:bitfocus:clarity:governance-model",
@@ -1521,6 +1521,16 @@
     },
     "id" : "35"
   }, {
+    "iri" : "urn:hud:hmis:owl#Project",
+    "baseIri" : "urn:hud:hmis:owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Project"
+    },
+    "attributes" : [ "external" ],
+    "id" : "33",
+    "superClasses" : [ "2" ]
+  }, {
     "iri" : "urn:bitfocus:clarity:governance-model#HealthMentalLongterm",
     "baseIri" : "urn:bitfocus:clarity:governance-model",
     "instances" : 0,
@@ -1558,22 +1568,12 @@
     },
     "label" : {
       "IRI-based" : "HealthMentalLongterm",
-      "undefined" : "HealthMentalLongterm"
+      "undefined" : "Long Term Mental Health Problem"
     },
     "comment" : {
       "undefined" : "If the problem is expected to be of long-continued and indefinite duration and substantially impedes a client‚Äôs ability to live"
     },
     "id" : "76"
-  }, {
-    "iri" : "urn:hud:hmis:owl#Project",
-    "baseIri" : "urn:hud:hmis:owl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Project"
-    },
-    "attributes" : [ "external" ],
-    "id" : "33",
-    "superClasses" : [ "2" ]
   }, {
     "iri" : "urn:hud:hmis:owl#Assessment",
     "baseIri" : "urn:hud:hmis:owl",
@@ -1678,7 +1678,7 @@
     },
     "label" : {
       "IRI-based" : "HealthDv",
-      "undefined" : "HealthDv"
+      "undefined" : "Survivor of Domestic Violence"
     },
     "comment" : {
       "undefined" : "If the person is a survivor of domestic violence."
@@ -1755,12 +1755,12 @@
     },
     "label" : {
       "IRI-based" : "HealthMental",
-      "undefined" : "HealthMental"
+      "undefined" : "Mental Health Disorder"
     },
     "comment" : {
       "undefined" : "HMIS Data Element 4.09 Mental Health Disorder"
     },
-    "id" : "62"
+    "id" : "60"
   }, {
     "iri" : "urn:bitfocus:clarity:governance-model#NameSuffix",
     "baseIri" : "urn:bitfocus:clarity:governance-model",
@@ -1799,7 +1799,7 @@
     },
     "label" : {
       "IRI-based" : "NameSuffix",
-      "undefined" : "NameSuffix"
+      "undefined" : "Suffix"
     },
     "comment" : {
       "undefined" : "Suffix"
@@ -1897,7 +1897,7 @@
     "id" : "38",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "40",
+    "id" : "39",
     "type" : "owl:objectProperty"
   }, {
     "id" : "41",
@@ -2213,7 +2213,7 @@
   }, {
     "range" : "2",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
     "iri" : "urn:bitfocus:clarity:governance-model#ServiceProvisionNotes",
@@ -2249,12 +2249,12 @@
   }, {
     "range" : "3",
     "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
     "range" : "13",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "38"
   }, {
     "iri" : "urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation",
@@ -2273,16 +2273,16 @@
     },
     "domain" : "3",
     "attributes" : [ "object" ],
-    "id" : "40"
+    "id" : "39"
   }, {
     "range" : "9",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "41"
   }, {
     "range" : "27",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "44"
   }, {
     "iri" : "urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability",
@@ -2387,27 +2387,9 @@
     "attributes" : [ "datatype" ],
     "id" : "54"
   }, {
-    "iri" : "urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem",
-    "baseIri" : "urn:bitfocus:clarity:governance-model",
-    "range" : "60",
-    "annotations" : {
-      "modelSet" : [ {
-        "identifier" : "modelSet",
-        "language" : "undefined",
-        "value" : "housing-payment",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "serviceTaxonomyToServiceItem"
-    },
-    "domain" : "14",
-    "attributes" : [ "object" ],
-    "id" : "59"
-  }, {
     "iri" : "urn:bitfocus:clarity:governance-model#healthMentalToDisability",
     "baseIri" : "urn:bitfocus:clarity:governance-model",
-    "range" : "62",
+    "range" : "60",
     "annotations" : {
       "modelSet" : [ {
         "identifier" : "modelSet",
@@ -2420,6 +2402,24 @@
       "IRI-based" : "healthMentalToDisability"
     },
     "domain" : "21",
+    "attributes" : [ "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem",
+    "baseIri" : "urn:bitfocus:clarity:governance-model",
+    "range" : "62",
+    "annotations" : {
+      "modelSet" : [ {
+        "identifier" : "modelSet",
+        "language" : "undefined",
+        "value" : "housing-payment",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "serviceTaxonomyToServiceItem"
+    },
+    "domain" : "14",
     "attributes" : [ "object" ],
     "id" : "61"
   }, {
@@ -2450,7 +2450,7 @@
       "IRI-based" : "ServiceTaxonomyCode",
       "undefined" : "code"
     },
-    "domain" : "60",
+    "domain" : "62",
     "attributes" : [ "datatype" ],
     "id" : "63"
   }, {
@@ -2509,17 +2509,17 @@
       "sql" : [ {
         "identifier" : "sql",
         "language" : "undefined",
+        "value" : "client_assessment_demographics.other_tribe_specify",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
         "value" : "client_program_demographics.other_tribe_specify",
         "type" : "label"
       }, {
         "identifier" : "sql",
         "language" : "undefined",
         "value" : "client_demographics.other_tribe_specify",
-        "type" : "label"
-      }, {
-        "identifier" : "sql",
-        "language" : "undefined",
-        "value" : "client_assessment_demographics.other_tribe_specify",
         "type" : "label"
       } ]
     },
@@ -2675,7 +2675,7 @@
   }, {
     "iri" : "urn:bitfocus:clarity:governance-model#veteranToClient",
     "baseIri" : "urn:bitfocus:clarity:governance-model",
-    "range" : "39",
+    "range" : "40",
     "annotations" : {
       "modelSet" : [ {
         "identifier" : "modelSet",
@@ -2734,12 +2734,12 @@
       "classification" : [ {
         "identifier" : "classification",
         "language" : "undefined",
-        "value" : "non-sensitive",
+        "value" : "PII",
         "type" : "label"
       }, {
         "identifier" : "classification",
         "language" : "undefined",
-        "value" : "PII",
+        "value" : "non-sensitive",
         "type" : "label"
       } ],
       "sql" : [ {
@@ -2922,12 +2922,12 @@
       }, {
         "identifier" : "sql",
         "language" : "undefined",
-        "value" : "client_program_demographics.name_middle",
+        "value" : "client_assessment_demographics.name_middle",
         "type" : "label"
       }, {
         "identifier" : "sql",
         "language" : "undefined",
-        "value" : "client_assessment_demographics.name_middle",
+        "value" : "client_program_demographics.name_middle",
         "type" : "label"
       } ]
     },
@@ -3270,17 +3270,17 @@
       "sql" : [ {
         "identifier" : "sql",
         "language" : "undefined",
+        "value" : "client_program_demographics.federally_recognized_tribe",
+        "type" : "label"
+      }, {
+        "identifier" : "sql",
+        "language" : "undefined",
         "value" : "client_demographics.federally_recognized_tribe",
         "type" : "label"
       }, {
         "identifier" : "sql",
         "language" : "undefined",
         "value" : "client_assessment_demographics.federally_recognized_tribe",
-        "type" : "label"
-      }, {
-        "identifier" : "sql",
-        "language" : "undefined",
-        "value" : "client_program_demographics.federally_recognized_tribe",
         "type" : "label"
       } ]
     },

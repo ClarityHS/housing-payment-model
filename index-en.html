@@ -1,0 +1,2951 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Bitfocus Clarity Housing Payment Model</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"urn:bitfocus:clarity:governance-model#","image":"http://vowl.visualdataweb.org/webvowl/#iri=urn:bitfocus:clarity:governance-model#","name":"Bitfocus Clarity Housing Payment Model", "headline":"This web ontology defines the data elements used for Medicaid housing payment within Clarity Human Services.", "dateReleased":"Tue Jun 24 10:02:49 EDT 2025", "dateModified":"06/23/2025", "version":"v1.0.0", "license":"null", "codeRepository":"https://github.com/ClarityHS/housing-payment-model", "author":[{"@type":"Person","name":"O'Sullivan, Jim "},{"@type":"Person","name":" Bianchi, Lauren "},{"@type":"Person","name":" Warren, John "},{"@type":"Person","name":" Jahn, Eric"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Bitfocus Clarity Housing Payment Model</h1>
+<img src="https://bitfocus.box.com/s/gy02p4piytawyo895geabw8097zb9ro5" width="50/">
+
+
+<dl>
+<dt>Modified on: 06/23/2025</dt>
+<dt>This version:</dt>
+<dd><a href="urn:bitfocus:clarity:governance-model#v1.0.0">urn:bitfocus:clarity:governance-model#v1.0.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="urn:bitfocus:clarity:governance-model#">urn:bitfocus:clarity:governance-model#</a></dd>
+<dt>Revision:</dt>
+<dd>v1.0.0</dd>
+<dt>Issued on:</dt>
+<dd>Date issued</dd>
+<dt>Authors:</dt>
+<dd>O'Sullivan, Jim </dd><dd> Bianchi, Lauren </dd><dd> Warren, John </dd><dd> Jahn, Eric</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="null" target="_blank"><img src="https://img.shields.io/badge/License-Copyright%202025%20Bitfocus.%20All%20rights%20reserved.-blue.svg" alt="null" /></a>
+<a href="null" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>O'Sullivan, Jim ; Bianchi, Lauren ; Warren, John ; Jahn, Eric. Bitfocus Clarity Housing Payment Model. Revision: v1.0.0. Retrieved from: urn:bitfocus:clarity:governance-model#v1.0.0</dd>
+<dt>Vocabulary maintained at:</dt>
+<dd><a href="https://github.com/ClarityHS/housing-payment-model">https://github.com/ClarityHS/housing-payment-model</a></dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Web Ontology Specification</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This web ontology defines the data elements used for Medicaid housing payment within Clarity Human Services.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Bitfocus Clarity Housing Payment Model: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#HealthDvFleeing"
+         title="urn:bitfocus:clarity:governance-model#HealthDvFleeing">Are you currently fleeing?</a>
+   </li>
+   <li>
+      <a href="#Assessment" title="urn:bitfocus:clarity:governance-model#Assessment">
+         <span>Assessment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#urn:hud:hmis:owl#Assessment" title="urn:hud:hmis:owl#Assessment">
+         <span>Assessment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#BenefitsMedicaid"
+         title="urn:bitfocus:clarity:governance-model#BenefitsMedicaid">BenefitsMedicaid</a>
+   </li>
+   <li>
+      <a href="#HealthChronic"
+         title="urn:bitfocus:clarity:governance-model#HealthChronic">Chronic Health Condition</a>
+   </li>
+   <li>
+      <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a>
+   </li>
+   <li>
+      <a href="#urn:hud:hmis:owl#Client" title="urn:hud:hmis:owl#Client">
+         <span>Client</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CommunityQueue"
+         title="urn:bitfocus:clarity:governance-model#CommunityQueue">
+         <span>Community Queue</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CurrentLivingSituation"
+         title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">
+         <span>Current Living Situation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Disability"
+         title="urn:bitfocus:clarity:governance-model#Disability">Disabilities </a>
+   </li>
+   <li>
+      <a href="#Eligibility"
+         title="urn:bitfocus:clarity:governance-model#Eligibility">
+         <span>Eligibility</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Enrollment"
+         title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a>
+   </li>
+   <li>
+      <a href="#urn:hud:hmis:owl#Enrollment" title="urn:hud:hmis:owl#Enrollment">
+         <span>Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ExitDestination"
+         title="urn:bitfocus:clarity:governance-model#ExitDestination">
+         <span>Exit Destination</span>
+      </a>
+   </li>
+   <li>
+      <a href="#File" title="urn:bitfocus:clarity:governance-model#File">
+         <span>File</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Form" title="urn:bitfocus:clarity:governance-model#Form">
+         <span>Form</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Gender" title="urn:bitfocus:clarity:governance-model#Gender">Gender</a>
+   </li>
+   <li>
+      <a href="#Geolocation"
+         title="urn:bitfocus:clarity:governance-model#Geolocation">
+         <span>Geolocation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Goal" title="urn:bitfocus:clarity:governance-model#Goal">
+         <span>Goal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HealthInsurance404"
+         title="urn:bitfocus:clarity:governance-model#HealthInsurance404">Health Insurance</a>
+   </li>
+   <li>
+      <a href="#HealthDv" title="urn:bitfocus:clarity:governance-model#HealthDv">HealthDv</a>
+   </li>
+   <li>
+      <a href="#HealthDvOccurred"
+         title="urn:bitfocus:clarity:governance-model#HealthDvOccurred">HealthDvOccurred</a>
+   </li>
+   <li>
+      <a href="#HealthMental"
+         title="urn:bitfocus:clarity:governance-model#HealthMental">HealthMental</a>
+   </li>
+   <li>
+      <a href="#HealthMentalLongterm"
+         title="urn:bitfocus:clarity:governance-model#HealthMentalLongterm">HealthMentalLongterm</a>
+   </li>
+   <li>
+      <a href="#HealthPregnancy"
+         title="urn:bitfocus:clarity:governance-model#HealthPregnancy">HealthPregnancy</a>
+   </li>
+   <li>
+      <a href="#HealthSubstanceAbuse"
+         title="urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse">HealthSubstanceAbuse</a>
+   </li>
+   <li>
+      <a href="#HealthSubstanceAbuseLongterm"
+         title="urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm">HealthSubstanceAbuseLongterm</a>
+   </li>
+   <li>
+      <a href="#NameSuffix"
+         title="urn:bitfocus:clarity:governance-model#NameSuffix">NameSuffix</a>
+   </li>
+   <li>
+      <a href="#PriorLivingSituation"
+         title="urn:bitfocus:clarity:governance-model#PriorLivingSituation">Prior Living Situation</a>
+   </li>
+   <li>
+      <a href="#PriorResidence"
+         title="urn:bitfocus:clarity:governance-model#PriorResidence">
+         <span>Prior Residence</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Program" title="urn:bitfocus:clarity:governance-model#Program">Program</a>
+   </li>
+   <li>
+      <a href="#urn:hud:hmis:owl#Project" title="urn:hud:hmis:owl#Project">
+         <span>Project</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral">
+         <span>Referral</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ReferralStatus"
+         title="urn:bitfocus:clarity:governance-model#ReferralStatus">
+         <span>Referral Status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Service" title="urn:bitfocus:clarity:governance-model#Service">
+         <span>Service</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ServiceExpense"
+         title="urn:bitfocus:clarity:governance-model#ServiceExpense">
+         <span>Service Expense</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ServiceItem"
+         title="urn:bitfocus:clarity:governance-model#ServiceItem">
+         <span>Service Item</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ServiceProvision"
+         title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a>
+   </li>
+   <li>
+      <a href="#ServiceTaxonomy"
+         title="urn:bitfocus:clarity:governance-model#ServiceTaxonomy">
+         <span>Service Taxonomy</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ServiceTimeTracking"
+         title="urn:bitfocus:clarity:governance-model#ServiceTimeTracking">
+         <span>Service Time Tracking</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Sex" title="urn:bitfocus:clarity:governance-model#Sex">Sex</a>
+   </li>
+   <li>
+      <a href="#Veteran" title="urn:bitfocus:clarity:governance-model#Veteran">Veteran Status</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#benefitsMedicaidToHealthInsurance404"
+         title="urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404">
+         <span>benefits Medicaid To Health Insurance404</span>
+      </a>
+   </li>
+   <li>
+      <a href="#clientHasBiologicalSex"
+         title="urn:bitfocus:clarity:governance-model#clientHasBiologicalSex">
+         <span>client Has Biological Sex</span>
+      </a>
+   </li>
+   <li>
+      <a href="#clientHasForm"
+         title="urn:bitfocus:clarity:governance-model#clientHasForm">
+         <span>client Has Form</span>
+      </a>
+   </li>
+   <li>
+      <a href="#clientHasGender"
+         title="urn:bitfocus:clarity:governance-model#clientHasGender">
+         <span>client Has Gender</span>
+      </a>
+   </li>
+   <li>
+      <a href="#enrollmentAchievedGoal"
+         title="urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal">
+         <span>enrollment Achieved Goal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#enrollmentHasCurrentLivingSituation"
+         title="urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation">
+         <span>enrollment Has Current Living Situation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#enrollmentHasForms"
+         title="urn:bitfocus:clarity:governance-model#enrollmentHasForms">
+         <span>enrollment Has Forms</span>
+      </a>
+   </li>
+   <li>
+      <a href="#enrollmentHasPriorLivingSituation"
+         title="urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation">
+         <span>enrollment Has Prior Living Situation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#enrollmenthasHealthInsurance404"
+         title="urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404">
+         <span>enrollmenthas Health Insurance404</span>
+      </a>
+   </li>
+   <li>
+      <a href="#exitDestinationToEnrollment"
+         title="urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment">
+         <span>exit Destination To Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#formHasFile"
+         title="urn:bitfocus:clarity:governance-model#formHasFile">
+         <span>form Has File</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasClientAssessment"
+         title="urn:bitfocus:clarity:governance-model#hasClientAssessment">
+         <span>has Client Assessment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasEnrollment"
+         title="urn:bitfocus:clarity:governance-model#hasEnrollment">
+         <span>has Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasEnrollmentAssessment"
+         title="urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment">
+         <span>has Enrollment Assessment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasEnrollmentService"
+         title="urn:bitfocus:clarity:governance-model#hasEnrollmentService">
+         <span>has Enrollment Service</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasFile" title="urn:bitfocus:clarity:governance-model#hasFile">
+         <span>has File</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasProgramEnrollment"
+         title="urn:bitfocus:clarity:governance-model#hasProgramEnrollment">
+         <span>has Program Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasReferral"
+         title="urn:bitfocus:clarity:governance-model#hasReferral">
+         <span>has Referral</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasReferralStatus"
+         title="urn:bitfocus:clarity:governance-model#hasReferralStatus">
+         <span>has Referral Status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasStandaloneService"
+         title="urn:bitfocus:clarity:governance-model#hasStandaloneService">
+         <span>has Standalone Service</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthChronicToDisability"
+         title="urn:bitfocus:clarity:governance-model#healthChronicToDisability">
+         <span>health Chronic To Disability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthChronicToEnrollment"
+         title="urn:bitfocus:clarity:governance-model#healthChronicToEnrollment">
+         <span>health Chronic To Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthDvFleeingToEnrollment"
+         title="urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment">
+         <span>health Dv Fleeing To Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthDvOccurredToEnrollment"
+         title="urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment">
+         <span>health Dv Occurred To Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthDvToEnrollment"
+         title="urn:bitfocus:clarity:governance-model#healthDvToEnrollment">
+         <span>health Dv To Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthMentalLongtermToDisability"
+         title="urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability">
+         <span>health Mental Longterm To Disability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthMentalToDisability"
+         title="urn:bitfocus:clarity:governance-model#healthMentalToDisability">
+         <span>health Mental To Disability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthPregnancyToEnrollment"
+         title="urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment">
+         <span>health Pregnancy To Enrollment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthSubstanceAbuseLongtermToDisability"
+         title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability">
+         <span>health Substance Abuse Longterm To Disability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#healthSubstanceAbuseToDisability"
+         title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability">
+         <span>health Substance Abuse To Disability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nameSuffixToClient"
+         title="urn:bitfocus:clarity:governance-model#nameSuffixToClient">
+         <span>name Suffix To Client</span>
+      </a>
+   </li>
+   <li>
+      <a href="#priorResidenceToPriorLivingSituation"
+         title="urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation">
+         <span>prior Residence To Prior Living Situation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#programHasEligibility"
+         title="urn:bitfocus:clarity:governance-model#programHasEligibility">
+         <span>program Has Eligibility</span>
+      </a>
+   </li>
+   <li>
+      <a href="#referralHasAssessment"
+         title="urn:bitfocus:clarity:governance-model#referralHasAssessment">
+         <span>referral Has Assessment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#referralHasQueue"
+         title="urn:bitfocus:clarity:governance-model#referralHasQueue">
+         <span>referral Has Queue</span>
+      </a>
+   </li>
+   <li>
+      <a href="#referralHasReplacement"
+         title="urn:bitfocus:clarity:governance-model#referralHasReplacement">
+         <span>referral Has Replacement</span>
+      </a>
+   </li>
+   <li>
+      <a href="#serviceItemHasExpense"
+         title="urn:bitfocus:clarity:governance-model#serviceItemHasExpense">
+         <span>service Item Has Expense</span>
+      </a>
+   </li>
+   <li>
+      <a href="#serviceItemToServiceProvision"
+         title="urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision">
+         <span>service Item To Service Provision</span>
+      </a>
+   </li>
+   <li>
+      <a href="#serviceProvisionToServiceTimeTracking"
+         title="urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking">
+         <span>service Provision To Service Time Tracking</span>
+      </a>
+   </li>
+   <li>
+      <a href="#serviceTaxonomyToServiceItem"
+         title="urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem">
+         <span>service Taxonomy To Service Item</span>
+      </a>
+   </li>
+   <li>
+      <a href="#veteranToClient"
+         title="urn:bitfocus:clarity:governance-model#veteranToClient">
+         <span>veteran To Client</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#ServiceTaxonomyCode"
+         title="urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode">code</a>
+   </li>
+   <li>
+      <a href="#ServiceCountDays"
+         title="urn:bitfocus:clarity:governance-model#ServiceCountDays">count_days</a>
+   </li>
+   <li>
+      <a href="#BirthDate" title="urn:bitfocus:clarity:governance-model#BirthDate">Date of Birth</a>
+   </li>
+   <li>
+      <a href="#FederallyRecognizedTribe"
+         title="urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe">Federally Recognized Tribe</a>
+   </li>
+   <li>
+      <a href="#FirstName" title="urn:bitfocus:clarity:governance-model#FirstName">First Name</a>
+   </li>
+   <li>
+      <a href="#LastName" title="urn:bitfocus:clarity:governance-model#LastName">Last Name</a>
+   </li>
+   <li>
+      <a href="#MiddleName" title="urn:bitfocus:clarity:governance-model#MiddleName">Middle Name</a>
+   </li>
+   <li>
+      <a href="#ServiceExpenseNotes"
+         title="urn:bitfocus:clarity:governance-model#ServiceExpenseNotes">notes</a>
+   </li>
+   <li>
+      <a href="#ServiceProvisionNotes"
+         title="urn:bitfocus:clarity:governance-model#ServiceProvisionNotes">notes</a>
+   </li>
+   <li>
+      <a href="#OtherTribeSpecify"
+         title="urn:bitfocus:clarity:governance-model#OtherTribeSpecify">Specify Other Tribe</a>
+   </li>
+   <li>
+      <a href="#Ssn" title="urn:bitfocus:clarity:governance-model#Ssn">
+         <span>Ssn</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ServiceTimeTrackingTrackingHour"
+         title="urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour">tracking_hour</a>
+   </li>
+   <li>
+      <a href="#ServiceTimeTrackingTrackingMinute"
+         title="urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute">tracking_minute</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#classification"
+         title="urn:bitfocus:clarity:governance-model#classification">
+         <span>classification</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#comment" title="http://www.w3.org/2000/01/rdf-schema#comment">
+         <span>comment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2000/01/rdf-schema#domain" title="http://www.w3.org/2000/01/rdf-schema#domain">
+         <span>domain</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hmisElementName"
+         title="urn:bitfocus:clarity:governance-model#hmisElementName">
+         <span>hmis Element Name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">
+         <span>identifier</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InventoryRecordsCalculationStatus"
+         title="urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus">
+         <span>Inventory Records Calculation Status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#isPartOfScreen"
+         title="urn:bitfocus:clarity:governance-model#isPartOfScreen">
+         <span>is Part Of Screen</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/language" title="http://purl.org/dc/elements/1.1/language">
+         <span>language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#looker" title="urn:bitfocus:clarity:governance-model#looker">
+         <span>looker</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ManualInventoryRefBedType"
+         title="urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType">
+         <span>Manual Inventory Ref Bed Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#modelSet" title="urn:bitfocus:clarity:governance-model#modelSet">
+         <span>model Set</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation">
+         <span>notation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#OutreachEvents"
+         title="urn:bitfocus:clarity:governance-model#OutreachEvents">
+         <span>Outreach Events</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sql" title="urn:bitfocus:clarity:governance-model#sql">
+         <span>sql</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#FosterCareHomeOrFosterCareGroupHome_215"
+         title="urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215">Foster care home or foster care group home</a>
+   </li>
+   <li>
+      <a href="#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206"
+         title="urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206">Hospital or other residential non-psychiatric medical facility</a>
+   </li>
+   <li>
+      <a href="#JailPrisonOrJuvenileDetentionFacility_207"
+         title="urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207">Jail, prison, or juvenile detention facility</a>
+   </li>
+   <li>
+      <a href="#PsychiatricHospitalOrOtherPsychiatricFacility_204"
+         title="urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204">Psychiatric hospital or other psychiatric facility</a>
+   </li>
+   <li>
+      <a href="#SafeHaven_118"
+         title="urn:bitfocus:clarity:governance-model#SafeHaven_118">Safe Haven</a>
+   </li>
+   <li>
+      <a href="#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302"
+         title="urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302">Transitional housing for homeless persons (including homeless youth)</a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Bitfocus Clarity Housing Payment Model: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.
+
+</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Bitfocus Clarity Housing Payment Model classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Bitfocus Clarity Housing Payment Model.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#HealthDvFleeing" title="urn:bitfocus:clarity:governance-model#HealthDvFleeing">Are you currently fleeing?</a></li>
+  <li><a href="#Assessment" title="urn:bitfocus:clarity:governance-model#Assessment"> <span>Assessment</span> </a></li>
+  <li><a href="#urn:hud:hmis:owl#Assessment" title="urn:hud:hmis:owl#Assessment"> <span>Assessment</span> </a></li>
+  <li><a href="#BenefitsMedicaid" title="urn:bitfocus:clarity:governance-model#BenefitsMedicaid">BenefitsMedicaid</a></li>
+  <li><a href="#HealthChronic" title="urn:bitfocus:clarity:governance-model#HealthChronic">Chronic Health Condition</a></li>
+  <li><a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a></li>
+  <li><a href="#urn:hud:hmis:owl#Client" title="urn:hud:hmis:owl#Client"> <span>Client</span> </a></li>
+  <li><a href="#CommunityQueue" title="urn:bitfocus:clarity:governance-model#CommunityQueue"> <span>Community Queue</span> </a></li>
+  <li><a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation"> <span>Current Living Situation</span> </a></li>
+  <li><a href="#Disability" title="urn:bitfocus:clarity:governance-model#Disability">Disabilities </a></li>
+  <li><a href="#Eligibility" title="urn:bitfocus:clarity:governance-model#Eligibility"> <span>Eligibility</span> </a></li>
+  <li><a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a></li>
+  <li><a href="#urn:hud:hmis:owl#Enrollment" title="urn:hud:hmis:owl#Enrollment"> <span>Enrollment</span> </a></li>
+  <li><a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination"> <span>Exit Destination</span> </a></li>
+  <li><a href="#File" title="urn:bitfocus:clarity:governance-model#File"> <span>File</span> </a></li>
+  <li><a href="#Form" title="urn:bitfocus:clarity:governance-model#Form"> <span>Form</span> </a></li>
+  <li><a href="#Gender" title="urn:bitfocus:clarity:governance-model#Gender">Gender</a></li>
+  <li><a href="#Geolocation" title="urn:bitfocus:clarity:governance-model#Geolocation"> <span>Geolocation</span> </a></li>
+  <li><a href="#Goal" title="urn:bitfocus:clarity:governance-model#Goal"> <span>Goal</span> </a></li>
+  <li><a href="#HealthInsurance404" title="urn:bitfocus:clarity:governance-model#HealthInsurance404">Health Insurance</a></li>
+  <li><a href="#HealthDv" title="urn:bitfocus:clarity:governance-model#HealthDv">HealthDv</a></li>
+  <li><a href="#HealthDvOccurred" title="urn:bitfocus:clarity:governance-model#HealthDvOccurred">HealthDvOccurred</a></li>
+  <li><a href="#HealthMental" title="urn:bitfocus:clarity:governance-model#HealthMental">HealthMental</a></li>
+  <li><a href="#HealthMentalLongterm" title="urn:bitfocus:clarity:governance-model#HealthMentalLongterm">HealthMentalLongterm</a></li>
+  <li><a href="#HealthPregnancy" title="urn:bitfocus:clarity:governance-model#HealthPregnancy">HealthPregnancy</a></li>
+  <li><a href="#HealthSubstanceAbuse" title="urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse">HealthSubstanceAbuse</a></li>
+  <li><a href="#HealthSubstanceAbuseLongterm" title="urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm">HealthSubstanceAbuseLongterm</a></li>
+  <li><a href="#NameSuffix" title="urn:bitfocus:clarity:governance-model#NameSuffix">NameSuffix</a></li>
+  <li><a href="#PriorLivingSituation" title="urn:bitfocus:clarity:governance-model#PriorLivingSituation">Prior Living Situation</a></li>
+  <li><a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence"> <span>Prior Residence</span> </a></li>
+  <li><a href="#Program" title="urn:bitfocus:clarity:governance-model#Program">Program</a></li>
+  <li><a href="#urn:hud:hmis:owl#Project" title="urn:hud:hmis:owl#Project"> <span>Project</span> </a></li>
+  <li><a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral"> <span>Referral</span> </a></li>
+  <li><a href="#ReferralStatus" title="urn:bitfocus:clarity:governance-model#ReferralStatus"> <span>Referral Status</span> </a></li>
+  <li><a href="#Service" title="urn:bitfocus:clarity:governance-model#Service"> <span>Service</span> </a></li>
+  <li><a href="#ServiceExpense" title="urn:bitfocus:clarity:governance-model#ServiceExpense"> <span>Service Expense</span> </a></li>
+  <li><a href="#ServiceItem" title="urn:bitfocus:clarity:governance-model#ServiceItem"> <span>Service Item</span> </a></li>
+  <li><a href="#ServiceProvision" title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a></li>
+  <li><a href="#ServiceTaxonomy" title="urn:bitfocus:clarity:governance-model#ServiceTaxonomy"> <span>Service Taxonomy</span> </a></li>
+  <li><a href="#ServiceTimeTracking" title="urn:bitfocus:clarity:governance-model#ServiceTimeTracking"> <span>Service Time Tracking</span> </a></li>
+  <li><a href="#Sex" title="urn:bitfocus:clarity:governance-model#Sex">Sex</a></li>
+  <li><a href="#Veteran" title="urn:bitfocus:clarity:governance-model#Veteran">Veteran Status</a></li>
+ </ul>
+ <div class="entity" id="HealthDvFleeing">
+  <h3>Are you currently fleeing?<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthDvFleeing</p>
+  <div class="comment">
+   <span class="markdown">Are you currently fleeing domestic violence?</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthDvFleeingToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment">health Dv Fleeing To Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Assessment">
+  <h3>Assessment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Assessment</p>
+  <div class="comment">
+   <span class="markdown">An assessment is a group of questions displayed on a screen that are used to track a client's progress over time. These assessments may or may not be assigned to an assessment processor.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#urn:hud:hmis:owl#Assessment" title="urn:hud:hmis:owl#Assessment">Assessment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasClientAssessment" title="urn:bitfocus:clarity:governance-model#hasClientAssessment">has Client Assessment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEnrollmentAssessment" title="urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment">has Enrollment Assessment</a> <sup class="type-op" title="object property">op</sup>, <a href="#referralHasAssessment" title="urn:bitfocus:clarity:governance-model#referralHasAssessment">referral Has Assessment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="urn:hud:hmis:owl#Assessment">
+  <h3>Assessment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:hud:hmis:owl#Assessment</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Assessment" title="urn:bitfocus:clarity:governance-model#Assessment">Assessment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="BenefitsMedicaid">
+  <h3>BenefitsMedicaid<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#BenefitsMedicaid</p>
+  <div class="comment">
+   <span class="markdown">MEDICAID health insurance program</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#benefitsMedicaidToHealthInsurance404" title="urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404">benefits Medicaid To Health Insurance404</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthChronic">
+  <h3>Chronic Health Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthChronic</p>
+  <div class="comment">
+   <span class="markdown">HMIS Data Element 4.07 Chronic Health Condition</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthChronicToDisability" title="urn:bitfocus:clarity:governance-model#healthChronicToDisability">health Chronic To Disability</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthChronicToEnrollment" title="urn:bitfocus:clarity:governance-model#healthChronicToEnrollment">health Chronic To Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Client">
+  <h3>Client<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Client</p>
+  <div class="comment">
+   <span class="markdown">Represents individuals whose information is stored in Clarity Human Services. The system allows for searching, viewing, editing, and managing client records, profiles, enrollments, services, assessments, and privacy settings (like Release of Information). The Client Model in Looker allows analysis across various client interactions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#urn:hud:hmis:owl#Client" title="urn:hud:hmis:owl#Client">Client</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#BirthDate" title="urn:bitfocus:clarity:governance-model#BirthDate">Date of Birth</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#FederallyRecognizedTribe" title="urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe">Federally Recognized Tribe</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#FirstName" title="urn:bitfocus:clarity:governance-model#FirstName">First Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#LastName" title="urn:bitfocus:clarity:governance-model#LastName">Last Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#MiddleName" title="urn:bitfocus:clarity:governance-model#MiddleName">Middle Name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#OtherTribeSpecify" title="urn:bitfocus:clarity:governance-model#OtherTribeSpecify">Specify Other Tribe</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#Ssn" title="urn:bitfocus:clarity:governance-model#Ssn">Ssn</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#clientHasBiologicalSex" title="urn:bitfocus:clarity:governance-model#clientHasBiologicalSex">client Has Biological Sex</a> <sup class="type-op" title="object property">op</sup>, <a href="#clientHasForm" title="urn:bitfocus:clarity:governance-model#clientHasForm">client Has Form</a> <sup class="type-op" title="object property">op</sup>, <a href="#clientHasGender" title="urn:bitfocus:clarity:governance-model#clientHasGender">client Has Gender</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasClientAssessment" title="urn:bitfocus:clarity:governance-model#hasClientAssessment">has Client Assessment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEnrollment" title="urn:bitfocus:clarity:governance-model#hasEnrollment">has Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFile" title="urn:bitfocus:clarity:governance-model#hasFile">has File</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStandaloneService" title="urn:bitfocus:clarity:governance-model#hasStandaloneService">has Standalone Service</a> <sup class="type-op" title="object property">op</sup>, <a href="#nameSuffixToClient" title="urn:bitfocus:clarity:governance-model#nameSuffixToClient">name Suffix To Client</a> <sup class="type-op" title="object property">op</sup>, <a href="#veteranToClient" title="urn:bitfocus:clarity:governance-model#veteranToClient">veteran To Client</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="urn:hud:hmis:owl#Client">
+  <h3>Client<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:hud:hmis:owl#Client</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CommunityQueue">
+  <h3>Community Queue<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#CommunityQueue</p>
+  <div class="comment">
+   <span class="markdown">Community Queue allows communities to triage and prioritize client referrals across programs, agencies, and systems of care.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#referralHasQueue" title="urn:bitfocus:clarity:governance-model#referralHasQueue">referral Has Queue</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CurrentLivingSituation">
+  <h3>Current Living Situation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#CurrentLivingSituation</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#enrollmentHasCurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation">enrollment Has Current Living Situation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#FosterCareHomeOrFosterCareGroupHome_215" title="urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215">Foster care home or foster care group home</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206" title="urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206">Hospital or other residential non-psychiatric medical facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#JailPrisonOrJuvenileDetentionFacility_207" title="urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207">Jail, prison, or juvenile detention facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PsychiatricHospitalOrOtherPsychiatricFacility_204" title="urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204">Psychiatric hospital or other psychiatric facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafeHaven_118" title="urn:bitfocus:clarity:governance-model#SafeHaven_118">Safe Haven</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302" title="urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302">Transitional housing for homeless persons (including homeless youth)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Disability">
+  <h3>Disabilities <sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Disability</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#healthChronicToDisability" title="urn:bitfocus:clarity:governance-model#healthChronicToDisability">health Chronic To Disability</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthMentalLongtermToDisability" title="urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability">health Mental Longterm To Disability</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthMentalToDisability" title="urn:bitfocus:clarity:governance-model#healthMentalToDisability">health Mental To Disability</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthSubstanceAbuseLongtermToDisability" title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability">health Substance Abuse Longterm To Disability</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthSubstanceAbuseToDisability" title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability">health Substance Abuse To Disability</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Eligibility">
+  <h3>Eligibility<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Eligibility</p>
+  <div class="comment">
+   <span class="markdown">The Program Eligibility feature simplifies the referral process by allowing users to set up Eligibility requirements for a program. These requirements dictate which programs display as eligible for a client after you complete an assessment with Eligibility Engine enabled. </span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#programHasEligibility" title="urn:bitfocus:clarity:governance-model#programHasEligibility">program Has Eligibility</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Enrollment">
+  <h3>Enrollment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Enrollment</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#urn:hud:hmis:owl#Enrollment" title="urn:hud:hmis:owl#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#enrollmentAchievedGoal" title="urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal">enrollment Achieved Goal</a> <sup class="type-op" title="object property">op</sup>, <a href="#enrollmentHasCurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation">enrollment Has Current Living Situation</a> <sup class="type-op" title="object property">op</sup>, <a href="#enrollmentHasForms" title="urn:bitfocus:clarity:governance-model#enrollmentHasForms">enrollment Has Forms</a> <sup class="type-op" title="object property">op</sup>, <a href="#enrollmentHasPriorLivingSituation" title="urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation">enrollment Has Prior Living Situation</a> <sup class="type-op" title="object property">op</sup>, <a href="#enrollmenthasHealthInsurance404" title="urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404">enrollmenthas Health Insurance404</a> <sup class="type-op" title="object property">op</sup>, <a href="#exitDestinationToEnrollment" title="urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment">exit Destination To Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEnrollmentAssessment" title="urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment">has Enrollment Assessment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEnrollmentService" title="urn:bitfocus:clarity:governance-model#hasEnrollmentService">has Enrollment Service</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReferral" title="urn:bitfocus:clarity:governance-model#hasReferral">has Referral</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthChronicToEnrollment" title="urn:bitfocus:clarity:governance-model#healthChronicToEnrollment">health Chronic To Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthDvFleeingToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment">health Dv Fleeing To Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthDvOccurredToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment">health Dv Occurred To Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthDvToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvToEnrollment">health Dv To Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#healthPregnancyToEnrollment" title="urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment">health Pregnancy To Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEnrollment" title="urn:bitfocus:clarity:governance-model#hasEnrollment">has Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProgramEnrollment" title="urn:bitfocus:clarity:governance-model#hasProgramEnrollment">has Program Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="urn:hud:hmis:owl#Enrollment">
+  <h3>Enrollment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:hud:hmis:owl#Enrollment</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExitDestination">
+  <h3>Exit Destination<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ExitDestination</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#exitDestinationToEnrollment" title="urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment">exit Destination To Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#FosterCareHomeOrFosterCareGroupHome_215" title="urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215">Foster care home or foster care group home</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206" title="urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206">Hospital or other residential non-psychiatric medical facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#JailPrisonOrJuvenileDetentionFacility_207" title="urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207">Jail, prison, or juvenile detention facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PsychiatricHospitalOrOtherPsychiatricFacility_204" title="urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204">Psychiatric hospital or other psychiatric facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafeHaven_118" title="urn:bitfocus:clarity:governance-model#SafeHaven_118">Safe Haven</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302" title="urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302">Transitional housing for homeless persons (including homeless youth)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="File">
+  <h3>File<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#File</p>
+  <div class="comment">
+   <span class="markdown">Files can be uploaded under different categories, and attached at either the client proflie or program level.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#formHasFile" title="urn:bitfocus:clarity:governance-model#formHasFile">form Has File</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFile" title="urn:bitfocus:clarity:governance-model#hasFile">has File</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Form">
+  <h3>Form<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Form</p>
+  <div class="comment">
+   <span class="markdown">Client Forms need to be enabled at the Agency and potentially Program level before use. Enabling forms allows them to be available in the client record's Files tab for completion and uploading.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#formHasFile" title="urn:bitfocus:clarity:governance-model#formHasFile">form Has File</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#clientHasForm" title="urn:bitfocus:clarity:governance-model#clientHasForm">client Has Form</a> <sup class="type-op" title="object property">op</sup>, <a href="#enrollmentHasForms" title="urn:bitfocus:clarity:governance-model#enrollmentHasForms">enrollment Has Forms</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Gender">
+  <h3>Gender<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Gender</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#clientHasGender" title="urn:bitfocus:clarity:governance-model#clientHasGender">client Has Gender</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Geolocation">
+  <h3>Geolocation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Geolocation</p>
+  <div class="comment">
+   <span class="markdown">Geolocation is a field type to collected specific location data in the system.</span>
+  </div>
+ </div>
+ <div class="entity" id="Goal">
+  <h3>Goal<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Goal</p>
+  <div class="comment">
+   <span class="markdown">Program Goals allow staff members to track whether a client accomplished a goal within an enrollment based on either demographic, service, or time-based data.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#enrollmentAchievedGoal" title="urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal">enrollment Achieved Goal</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthInsurance404">
+  <h3>Health Insurance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthInsurance404</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#benefitsMedicaidToHealthInsurance404" title="urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404">benefits Medicaid To Health Insurance404</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#enrollmenthasHealthInsurance404" title="urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404">enrollmenthas Health Insurance404</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthDv">
+  <h3>HealthDv<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthDv</p>
+  <div class="comment">
+   <span class="markdown">If the person is a survivor of domestic violence.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthDvToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvToEnrollment">health Dv To Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthDvOccurred">
+  <h3>HealthDvOccurred<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthDvOccurred</p>
+  <div class="comment">
+   <span class="markdown">How long ago did the person have the most recent experience.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthDvOccurredToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment">health Dv Occurred To Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthMental">
+  <h3>HealthMental<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthMental</p>
+  <div class="comment">
+   <span class="markdown">HMIS Data Element 4.09 Mental Health Disorder</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthMentalToDisability" title="urn:bitfocus:clarity:governance-model#healthMentalToDisability">health Mental To Disability</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthMentalLongterm">
+  <h3>HealthMentalLongterm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthMentalLongterm</p>
+  <div class="comment">
+   <span class="markdown">If the problem is expected to be of long-continued and indefinite duration and substantially impedes a client‚Äôs ability to live</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthMentalLongtermToDisability" title="urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability">health Mental Longterm To Disability</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthPregnancy">
+  <h3>HealthPregnancy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthPregnancy</p>
+  <div class="comment">
+   <span class="markdown">HMIS Data Element R10 Pregnancy Status collected on RHY client Program Enrollment and Update screens</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthPregnancyToEnrollment" title="urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment">health Pregnancy To Enrollment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthSubstanceAbuse">
+  <h3>HealthSubstanceAbuse<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse</p>
+  <div class="comment">
+   <span class="markdown">If the client has an alcohol or drug use disorder or both.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthSubstanceAbuseToDisability" title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability">health Substance Abuse To Disability</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HealthSubstanceAbuseLongterm">
+  <h3>HealthSubstanceAbuseLongterm<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm</p>
+  <div class="comment">
+   <span class="markdown">If the problem is expected to be of long, continued and indefinite duration and substantially impedes a clients ability to live independently</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#healthSubstanceAbuseLongtermToDisability" title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability">health Substance Abuse Longterm To Disability</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="NameSuffix">
+  <h3>NameSuffix<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#NameSuffix</p>
+  <div class="comment">
+   <span class="markdown">Suffix</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#nameSuffixToClient" title="urn:bitfocus:clarity:governance-model#nameSuffixToClient">name Suffix To Client</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PriorLivingSituation">
+  <h3>Prior Living Situation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#PriorLivingSituation</p>
+  <div class="comment">
+   <span class="markdown">HMIS Data Element 3.917: Prior Living Situation fields in collaboration with 3.08 Disabling Condition are utilized to calculate a client's Chronic Homeless status. Chronic Homelessness is defined as experiencing literal homelessness for 12+ consecutive months, or 4+ episodes adding up to 12+ months over the past 3 years, and having a disabling condition. </span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#priorResidenceToPriorLivingSituation" title="urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation">prior Residence To Prior Living Situation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#enrollmentHasPriorLivingSituation" title="urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation">enrollment Has Prior Living Situation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PriorResidence">
+  <h3>Prior Residence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#PriorResidence</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#priorResidenceToPriorLivingSituation" title="urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation">prior Residence To Prior Living Situation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#FosterCareHomeOrFosterCareGroupHome_215" title="urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215">Foster care home or foster care group home</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206" title="urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206">Hospital or other residential non-psychiatric medical facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#JailPrisonOrJuvenileDetentionFacility_207" title="urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207">Jail, prison, or juvenile detention facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PsychiatricHospitalOrOtherPsychiatricFacility_204" title="urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204">Psychiatric hospital or other psychiatric facility</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SafeHaven_118" title="urn:bitfocus:clarity:governance-model#SafeHaven_118">Safe Haven</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302" title="urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302">Transitional housing for homeless persons (including homeless youth)</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Program">
+  <h3>Program<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Program</p>
+  <div class="comment">
+   <span class="markdown">Clarity Programs are equivalent to the HMIS Project.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#urn:hud:hmis:owl#Project" title="urn:hud:hmis:owl#Project">Project</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasProgramEnrollment" title="urn:bitfocus:clarity:governance-model#hasProgramEnrollment">has Program Enrollment</a> <sup class="type-op" title="object property">op</sup>, <a href="#programHasEligibility" title="urn:bitfocus:clarity:governance-model#programHasEligibility">program Has Eligibility</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="urn:hud:hmis:owl#Project">
+  <h3>Project<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:hud:hmis:owl#Project</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Program" title="urn:bitfocus:clarity:governance-model#Program">Program</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Referral">
+  <h3>Referral<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Referral</p>
+  <div class="comment">
+   <span class="markdown">The process of directing a client to a program or Community Queue for services or housing. Referrals have statuses (Pending, Denied, Expired, Completed), can be assigned case managers or navigators, and involve tracking eligibility, priority, and history. Referral Settings allow administrators to customize the process.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasReferralStatus" title="urn:bitfocus:clarity:governance-model#hasReferralStatus">has Referral Status</a> <sup class="type-op" title="object property">op</sup>, <a href="#referralHasAssessment" title="urn:bitfocus:clarity:governance-model#referralHasAssessment">referral Has Assessment</a> <sup class="type-op" title="object property">op</sup>, <a href="#referralHasQueue" title="urn:bitfocus:clarity:governance-model#referralHasQueue">referral Has Queue</a> <sup class="type-op" title="object property">op</sup>, <a href="#referralHasReplacement" title="urn:bitfocus:clarity:governance-model#referralHasReplacement">referral Has Replacement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasReferral" title="urn:bitfocus:clarity:governance-model#hasReferral">has Referral</a> <sup class="type-op" title="object property">op</sup>, <a href="#referralHasReplacement" title="urn:bitfocus:clarity:governance-model#referralHasReplacement">referral Has Replacement</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ReferralStatus">
+  <h3>Referral Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ReferralStatus</p>
+  <div class="comment">
+   <span class="markdown">Indicates the current state of a referral (Pending, Pending - In Process, Denied, Expired, Completed) and impacts where it displays. It communicates acceptance, processing stage, or expiration/denial. Status can be updated based on user actions or system settings like expiration thresholds.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasReferralStatus" title="urn:bitfocus:clarity:governance-model#hasReferralStatus">has Referral Status</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Service">
+  <h3>Service<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Service</p>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ServiceItem" title="urn:bitfocus:clarity:governance-model#ServiceItem">Service Item</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#ServiceCountDays" title="urn:bitfocus:clarity:governance-model#ServiceCountDays">count_days</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceExpense">
+  <h3>Service Expense<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceExpense</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#ServiceExpenseNotes" title="urn:bitfocus:clarity:governance-model#ServiceExpenseNotes">notes</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#serviceItemHasExpense" title="urn:bitfocus:clarity:governance-model#serviceItemHasExpense">service Item Has Expense</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceItem">
+  <h3>Service Item<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceItem</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Service" title="urn:bitfocus:clarity:governance-model#Service">Service</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#serviceItemToServiceProvision" title="urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision">service Item To Service Provision</a> <sup class="type-op" title="object property">op</sup>, <a href="#serviceTaxonomyToServiceItem" title="urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem">service Taxonomy To Service Item</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceProvision">
+  <h3>Service Provision<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceProvision</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#ServiceProvisionNotes" title="urn:bitfocus:clarity:governance-model#ServiceProvisionNotes">notes</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#serviceItemHasExpense" title="urn:bitfocus:clarity:governance-model#serviceItemHasExpense">service Item Has Expense</a> <sup class="type-op" title="object property">op</sup>, <a href="#serviceProvisionToServiceTimeTracking" title="urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking">service Provision To Service Time Tracking</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEnrollmentService" title="urn:bitfocus:clarity:governance-model#hasEnrollmentService">has Enrollment Service</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStandaloneService" title="urn:bitfocus:clarity:governance-model#hasStandaloneService">has Standalone Service</a> <sup class="type-op" title="object property">op</sup>, <a href="#serviceItemToServiceProvision" title="urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision">service Item To Service Provision</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceTaxonomy">
+  <h3>Service Taxonomy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceTaxonomy</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#ServiceTaxonomyCode" title="urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode">code</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#serviceTaxonomyToServiceItem" title="urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem">service Taxonomy To Service Item</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ServiceTimeTracking">
+  <h3>Service Time Tracking<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceTimeTracking</p>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#ServiceTimeTrackingTrackingHour" title="urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour">tracking_hour</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#ServiceTimeTrackingTrackingMinute" title="urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute">tracking_minute</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#serviceProvisionToServiceTimeTracking" title="urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking">service Provision To Service Time Tracking</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Sex">
+  <h3>Sex<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Sex</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#clientHasBiologicalSex" title="urn:bitfocus:clarity:governance-model#clientHasBiologicalSex">client Has Biological Sex</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Veteran">
+  <h3>Veteran Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Veteran</p>
+  <div class="comment">
+   <span class="markdown">A veteran is someone who has served on active duty in the Armed Forces of the United States. This does not include inactive mili</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#veteranToClient" title="urn:bitfocus:clarity:governance-model#veteranToClient">veteran To Client</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#benefitsMedicaidToHealthInsurance404" title="urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404"> <span>benefits Medicaid To Health Insurance404</span> </a></li>
+  <li><a href="#clientHasBiologicalSex" title="urn:bitfocus:clarity:governance-model#clientHasBiologicalSex"> <span>client Has Biological Sex</span> </a></li>
+  <li><a href="#clientHasForm" title="urn:bitfocus:clarity:governance-model#clientHasForm"> <span>client Has Form</span> </a></li>
+  <li><a href="#clientHasGender" title="urn:bitfocus:clarity:governance-model#clientHasGender"> <span>client Has Gender</span> </a></li>
+  <li><a href="#enrollmentAchievedGoal" title="urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal"> <span>enrollment Achieved Goal</span> </a></li>
+  <li><a href="#enrollmentHasCurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation"> <span>enrollment Has Current Living Situation</span> </a></li>
+  <li><a href="#enrollmentHasForms" title="urn:bitfocus:clarity:governance-model#enrollmentHasForms"> <span>enrollment Has Forms</span> </a></li>
+  <li><a href="#enrollmentHasPriorLivingSituation" title="urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation"> <span>enrollment Has Prior Living Situation</span> </a></li>
+  <li><a href="#enrollmenthasHealthInsurance404" title="urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404"> <span>enrollmenthas Health Insurance404</span> </a></li>
+  <li><a href="#exitDestinationToEnrollment" title="urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment"> <span>exit Destination To Enrollment</span> </a></li>
+  <li><a href="#formHasFile" title="urn:bitfocus:clarity:governance-model#formHasFile"> <span>form Has File</span> </a></li>
+  <li><a href="#hasClientAssessment" title="urn:bitfocus:clarity:governance-model#hasClientAssessment"> <span>has Client Assessment</span> </a></li>
+  <li><a href="#hasEnrollment" title="urn:bitfocus:clarity:governance-model#hasEnrollment"> <span>has Enrollment</span> </a></li>
+  <li><a href="#hasEnrollmentAssessment" title="urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment"> <span>has Enrollment Assessment</span> </a></li>
+  <li><a href="#hasEnrollmentService" title="urn:bitfocus:clarity:governance-model#hasEnrollmentService"> <span>has Enrollment Service</span> </a></li>
+  <li><a href="#hasFile" title="urn:bitfocus:clarity:governance-model#hasFile"> <span>has File</span> </a></li>
+  <li><a href="#hasProgramEnrollment" title="urn:bitfocus:clarity:governance-model#hasProgramEnrollment"> <span>has Program Enrollment</span> </a></li>
+  <li><a href="#hasReferral" title="urn:bitfocus:clarity:governance-model#hasReferral"> <span>has Referral</span> </a></li>
+  <li><a href="#hasReferralStatus" title="urn:bitfocus:clarity:governance-model#hasReferralStatus"> <span>has Referral Status</span> </a></li>
+  <li><a href="#hasStandaloneService" title="urn:bitfocus:clarity:governance-model#hasStandaloneService"> <span>has Standalone Service</span> </a></li>
+  <li><a href="#healthChronicToDisability" title="urn:bitfocus:clarity:governance-model#healthChronicToDisability"> <span>health Chronic To Disability</span> </a></li>
+  <li><a href="#healthChronicToEnrollment" title="urn:bitfocus:clarity:governance-model#healthChronicToEnrollment"> <span>health Chronic To Enrollment</span> </a></li>
+  <li><a href="#healthDvFleeingToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment"> <span>health Dv Fleeing To Enrollment</span> </a></li>
+  <li><a href="#healthDvOccurredToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment"> <span>health Dv Occurred To Enrollment</span> </a></li>
+  <li><a href="#healthDvToEnrollment" title="urn:bitfocus:clarity:governance-model#healthDvToEnrollment"> <span>health Dv To Enrollment</span> </a></li>
+  <li><a href="#healthMentalLongtermToDisability" title="urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability"> <span>health Mental Longterm To Disability</span> </a></li>
+  <li><a href="#healthMentalToDisability" title="urn:bitfocus:clarity:governance-model#healthMentalToDisability"> <span>health Mental To Disability</span> </a></li>
+  <li><a href="#healthPregnancyToEnrollment" title="urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment"> <span>health Pregnancy To Enrollment</span> </a></li>
+  <li><a href="#healthSubstanceAbuseLongtermToDisability" title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability"> <span>health Substance Abuse Longterm To Disability</span> </a></li>
+  <li><a href="#healthSubstanceAbuseToDisability" title="urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability"> <span>health Substance Abuse To Disability</span> </a></li>
+  <li><a href="#nameSuffixToClient" title="urn:bitfocus:clarity:governance-model#nameSuffixToClient"> <span>name Suffix To Client</span> </a></li>
+  <li><a href="#priorResidenceToPriorLivingSituation" title="urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation"> <span>prior Residence To Prior Living Situation</span> </a></li>
+  <li><a href="#programHasEligibility" title="urn:bitfocus:clarity:governance-model#programHasEligibility"> <span>program Has Eligibility</span> </a></li>
+  <li><a href="#referralHasAssessment" title="urn:bitfocus:clarity:governance-model#referralHasAssessment"> <span>referral Has Assessment</span> </a></li>
+  <li><a href="#referralHasQueue" title="urn:bitfocus:clarity:governance-model#referralHasQueue"> <span>referral Has Queue</span> </a></li>
+  <li><a href="#referralHasReplacement" title="urn:bitfocus:clarity:governance-model#referralHasReplacement"> <span>referral Has Replacement</span> </a></li>
+  <li><a href="#serviceItemHasExpense" title="urn:bitfocus:clarity:governance-model#serviceItemHasExpense"> <span>service Item Has Expense</span> </a></li>
+  <li><a href="#serviceItemToServiceProvision" title="urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision"> <span>service Item To Service Provision</span> </a></li>
+  <li><a href="#serviceProvisionToServiceTimeTracking" title="urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking"> <span>service Provision To Service Time Tracking</span> </a></li>
+  <li><a href="#serviceTaxonomyToServiceItem" title="urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem"> <span>service Taxonomy To Service Item</span> </a></li>
+  <li><a href="#veteranToClient" title="urn:bitfocus:clarity:governance-model#veteranToClient"> <span>veteran To Client</span> </a></li>
+ </ul>
+ <div class="entity" id="benefitsMedicaidToHealthInsurance404">
+  <h3>benefits Medicaid To Health Insurance404<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#benefitsMedicaidToHealthInsurance404</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HealthInsurance404" title="urn:bitfocus:clarity:governance-model#HealthInsurance404">Health Insurance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#BenefitsMedicaid" title="urn:bitfocus:clarity:governance-model#BenefitsMedicaid">BenefitsMedicaid</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="clientHasBiologicalSex">
+  <h3>client Has Biological Sex<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#clientHasBiologicalSex</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Sex" title="urn:bitfocus:clarity:governance-model#Sex">Sex</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="clientHasForm">
+  <h3>client Has Form<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#clientHasForm</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Form" title="urn:bitfocus:clarity:governance-model#Form">Form</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="clientHasGender">
+  <h3>client Has Gender<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#clientHasGender</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Gender" title="urn:bitfocus:clarity:governance-model#Gender">Gender</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="enrollmentAchievedGoal">
+  <h3>enrollment Achieved Goal<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#enrollmentAchievedGoal</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Goal" title="urn:bitfocus:clarity:governance-model#Goal">Goal</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="enrollmentHasCurrentLivingSituation">
+  <h3>enrollment Has Current Living Situation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#enrollmentHasCurrentLivingSituation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">Current Living Situation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="enrollmentHasForms">
+  <h3>enrollment Has Forms<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#enrollmentHasForms</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Form" title="urn:bitfocus:clarity:governance-model#Form">Form</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="enrollmentHasPriorLivingSituation">
+  <h3>enrollment Has Prior Living Situation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#enrollmentHasPriorLivingSituation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PriorLivingSituation" title="urn:bitfocus:clarity:governance-model#PriorLivingSituation">Prior Living Situation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="enrollmenthasHealthInsurance404">
+  <h3>enrollmenthas Health Insurance404<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#enrollmenthasHealthInsurance404</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthInsurance404" title="urn:bitfocus:clarity:governance-model#HealthInsurance404">Health Insurance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="exitDestinationToEnrollment">
+  <h3>exit Destination To Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#exitDestinationToEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination">Exit Destination</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="formHasFile">
+  <h3>form Has File<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#formHasFile</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Form" title="urn:bitfocus:clarity:governance-model#Form">Form</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#File" title="urn:bitfocus:clarity:governance-model#File">File</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasClientAssessment">
+  <h3>has Client Assessment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasClientAssessment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Assessment" title="urn:bitfocus:clarity:governance-model#Assessment">Assessment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEnrollment">
+  <h3>has Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEnrollmentAssessment">
+  <h3>has Enrollment Assessment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasEnrollmentAssessment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Assessment" title="urn:bitfocus:clarity:governance-model#Assessment">Assessment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEnrollmentService">
+  <h3>has Enrollment Service<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasEnrollmentService</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ServiceProvision" title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFile">
+  <h3>has File<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasFile</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#File" title="urn:bitfocus:clarity:governance-model#File">File</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProgramEnrollment">
+  <h3>has Program Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasProgramEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Program" title="urn:bitfocus:clarity:governance-model#Program">Program</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasReferral">
+  <h3>has Referral<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasReferral</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral">Referral</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasReferralStatus">
+  <h3>has Referral Status<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasReferralStatus</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral">Referral</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ReferralStatus" title="urn:bitfocus:clarity:governance-model#ReferralStatus">Referral Status</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasStandaloneService">
+  <h3>has Standalone Service<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hasStandaloneService</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ServiceProvision" title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthChronicToDisability">
+  <h3>health Chronic To Disability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthChronicToDisability</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Disability" title="urn:bitfocus:clarity:governance-model#Disability">Disabilities </a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthChronic" title="urn:bitfocus:clarity:governance-model#HealthChronic">Chronic Health Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthChronicToEnrollment">
+  <h3>health Chronic To Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthChronicToEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthChronic" title="urn:bitfocus:clarity:governance-model#HealthChronic">Chronic Health Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthDvFleeingToEnrollment">
+  <h3>health Dv Fleeing To Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthDvFleeingToEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthDvFleeing" title="urn:bitfocus:clarity:governance-model#HealthDvFleeing">Are you currently fleeing?</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthDvOccurredToEnrollment">
+  <h3>health Dv Occurred To Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthDvOccurredToEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthDvOccurred" title="urn:bitfocus:clarity:governance-model#HealthDvOccurred">HealthDvOccurred</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthDvToEnrollment">
+  <h3>health Dv To Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthDvToEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthDv" title="urn:bitfocus:clarity:governance-model#HealthDv">HealthDv</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthMentalLongtermToDisability">
+  <h3>health Mental Longterm To Disability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthMentalLongtermToDisability</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Disability" title="urn:bitfocus:clarity:governance-model#Disability">Disabilities </a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthMentalLongterm" title="urn:bitfocus:clarity:governance-model#HealthMentalLongterm">HealthMentalLongterm</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthMentalToDisability">
+  <h3>health Mental To Disability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthMentalToDisability</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Disability" title="urn:bitfocus:clarity:governance-model#Disability">Disabilities </a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthMental" title="urn:bitfocus:clarity:governance-model#HealthMental">HealthMental</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthPregnancyToEnrollment">
+  <h3>health Pregnancy To Enrollment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthPregnancyToEnrollment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Enrollment" title="urn:bitfocus:clarity:governance-model#Enrollment">Enrollment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthPregnancy" title="urn:bitfocus:clarity:governance-model#HealthPregnancy">HealthPregnancy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthSubstanceAbuseLongtermToDisability">
+  <h3>health Substance Abuse Longterm To Disability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthSubstanceAbuseLongtermToDisability</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Disability" title="urn:bitfocus:clarity:governance-model#Disability">Disabilities </a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthSubstanceAbuseLongterm" title="urn:bitfocus:clarity:governance-model#HealthSubstanceAbuseLongterm">HealthSubstanceAbuseLongterm</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="healthSubstanceAbuseToDisability">
+  <h3>health Substance Abuse To Disability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#healthSubstanceAbuseToDisability</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Disability" title="urn:bitfocus:clarity:governance-model#Disability">Disabilities </a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HealthSubstanceAbuse" title="urn:bitfocus:clarity:governance-model#HealthSubstanceAbuse">HealthSubstanceAbuse</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="nameSuffixToClient">
+  <h3>name Suffix To Client<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#nameSuffixToClient</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#NameSuffix" title="urn:bitfocus:clarity:governance-model#NameSuffix">NameSuffix</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="priorResidenceToPriorLivingSituation">
+  <h3>prior Residence To Prior Living Situation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#priorResidenceToPriorLivingSituation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PriorLivingSituation" title="urn:bitfocus:clarity:governance-model#PriorLivingSituation">Prior Living Situation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence">Prior Residence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="programHasEligibility">
+  <h3>program Has Eligibility<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#programHasEligibility</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Program" title="urn:bitfocus:clarity:governance-model#Program">Program</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Eligibility" title="urn:bitfocus:clarity:governance-model#Eligibility">Eligibility</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="referralHasAssessment">
+  <h3>referral Has Assessment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#referralHasAssessment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral">Referral</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Assessment" title="urn:bitfocus:clarity:governance-model#Assessment">Assessment</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="referralHasQueue">
+  <h3>referral Has Queue<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#referralHasQueue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral">Referral</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#CommunityQueue" title="urn:bitfocus:clarity:governance-model#CommunityQueue">Community Queue</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="referralHasReplacement">
+  <h3>referral Has Replacement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#referralHasReplacement</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral">Referral</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Referral" title="urn:bitfocus:clarity:governance-model#Referral">Referral</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="serviceItemHasExpense">
+  <h3>service Item Has Expense<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#serviceItemHasExpense</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceProvision" title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ServiceExpense" title="urn:bitfocus:clarity:governance-model#ServiceExpense">Service Expense</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="serviceItemToServiceProvision">
+  <h3>service Item To Service Provision<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#serviceItemToServiceProvision</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceItem" title="urn:bitfocus:clarity:governance-model#ServiceItem">Service Item</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ServiceProvision" title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="serviceProvisionToServiceTimeTracking">
+  <h3>service Provision To Service Time Tracking<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#serviceProvisionToServiceTimeTracking</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceProvision" title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ServiceTimeTracking" title="urn:bitfocus:clarity:governance-model#ServiceTimeTracking">Service Time Tracking</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="serviceTaxonomyToServiceItem">
+  <h3>service Taxonomy To Service Item<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#serviceTaxonomyToServiceItem</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceItem" title="urn:bitfocus:clarity:governance-model#ServiceItem">Service Item</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ServiceTaxonomy" title="urn:bitfocus:clarity:governance-model#ServiceTaxonomy">Service Taxonomy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="veteranToClient">
+  <h3>veteran To Client<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#veteranToClient</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Veteran" title="urn:bitfocus:clarity:governance-model#Veteran">Veteran Status</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#ServiceTaxonomyCode" title="urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode">code</a></li>
+  <li><a href="#ServiceCountDays" title="urn:bitfocus:clarity:governance-model#ServiceCountDays">count_days</a></li>
+  <li><a href="#BirthDate" title="urn:bitfocus:clarity:governance-model#BirthDate">Date of Birth</a></li>
+  <li><a href="#FederallyRecognizedTribe" title="urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe">Federally Recognized Tribe</a></li>
+  <li><a href="#FirstName" title="urn:bitfocus:clarity:governance-model#FirstName">First Name</a></li>
+  <li><a href="#LastName" title="urn:bitfocus:clarity:governance-model#LastName">Last Name</a></li>
+  <li><a href="#MiddleName" title="urn:bitfocus:clarity:governance-model#MiddleName">Middle Name</a></li>
+  <li><a href="#ServiceExpenseNotes" title="urn:bitfocus:clarity:governance-model#ServiceExpenseNotes">notes</a></li>
+  <li><a href="#ServiceProvisionNotes" title="urn:bitfocus:clarity:governance-model#ServiceProvisionNotes">notes</a></li>
+  <li><a href="#OtherTribeSpecify" title="urn:bitfocus:clarity:governance-model#OtherTribeSpecify">Specify Other Tribe</a></li>
+  <li><a href="#Ssn" title="urn:bitfocus:clarity:governance-model#Ssn"> <span>Ssn</span> </a></li>
+  <li><a href="#ServiceTimeTrackingTrackingHour" title="urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour">tracking_hour</a></li>
+  <li><a href="#ServiceTimeTrackingTrackingMinute" title="urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute">tracking_minute</a></li>
+ </ul>
+ <div class="entity" id="ServiceTaxonomyCode">
+  <h3>code<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceTaxonomyCode</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceTaxonomy" title="urn:bitfocus:clarity:governance-model#ServiceTaxonomy">Service Taxonomy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ServiceCountDays">
+  <h3>count_days<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceCountDays</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Service" title="urn:bitfocus:clarity:governance-model#Service">Service</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="BirthDate">
+  <h3>Date of Birth<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#BirthDate</p>
+  <div class="comment">
+   <span class="markdown">Clients birth date</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="FederallyRecognizedTribe">
+  <h3>Federally Recognized Tribe<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#FederallyRecognizedTribe</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="FirstName">
+  <h3>First Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#FirstName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="LastName">
+  <h3>Last Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#LastName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="MiddleName">
+  <h3>Middle Name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#MiddleName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ServiceExpenseNotes">
+  <h3>notes<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceExpenseNotes</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceExpense" title="urn:bitfocus:clarity:governance-model#ServiceExpense">Service Expense</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ServiceProvisionNotes">
+  <h3>notes<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceProvisionNotes</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceProvision" title="urn:bitfocus:clarity:governance-model#ServiceProvision">Service Provision</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="OtherTribeSpecify">
+  <h3>Specify Other Tribe<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#OtherTribeSpecify</p>
+  <div class="comment">
+   <span class="markdown">A dependent field of Federally Recognized Tribe to allow additional data entry when a client is affiliated with a tribal entity not within the federally recognized tribes list.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Ssn">
+  <h3>Ssn<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#Ssn</p>
+  <div class="comment">
+   <span class="markdown">HMIS Data Standards Element 3.02</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Client" title="urn:bitfocus:clarity:governance-model#Client">Client</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ServiceTimeTrackingTrackingHour">
+  <h3>tracking_hour<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingHour</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceTimeTracking" title="urn:bitfocus:clarity:governance-model#ServiceTimeTracking">Service Time Tracking</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ServiceTimeTrackingTrackingMinute">
+  <h3>tracking_minute<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ServiceTimeTrackingTrackingMinute</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ServiceTimeTracking" title="urn:bitfocus:clarity:governance-model#ServiceTimeTracking">Service Time Tracking</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#classification" title="urn:bitfocus:clarity:governance-model#classification"> <span>classification</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#comment" title="http://www.w3.org/2000/01/rdf-schema#comment"> <span>comment</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2000/01/rdf-schema#domain" title="http://www.w3.org/2000/01/rdf-schema#domain"> <span>domain</span> </a></li>
+  <li><a href="#hmisElementName" title="urn:bitfocus:clarity:governance-model#hmisElementName"> <span>hmis Element Name</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier"> <span>identifier</span> </a></li>
+  <li><a href="#InventoryRecordsCalculationStatus" title="urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus"> <span>Inventory Records Calculation Status</span> </a></li>
+  <li><a href="#isPartOfScreen" title="urn:bitfocus:clarity:governance-model#isPartOfScreen"> <span>is Part Of Screen</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/language" title="http://purl.org/dc/elements/1.1/language"> <span>language</span> </a></li>
+  <li><a href="#looker" title="urn:bitfocus:clarity:governance-model#looker"> <span>looker</span> </a></li>
+  <li><a href="#ManualInventoryRefBedType" title="urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType"> <span>Manual Inventory Ref Bed Type</span> </a></li>
+  <li><a href="#modelSet" title="urn:bitfocus:clarity:governance-model#modelSet"> <span>model Set</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#notation" title="http://www.w3.org/2004/02/skos/core#notation"> <span>notation</span> </a></li>
+  <li><a href="#OutreachEvents" title="urn:bitfocus:clarity:governance-model#OutreachEvents"> <span>Outreach Events</span> </a></li>
+  <li><a href="#sql" title="urn:bitfocus:clarity:governance-model#sql"> <span>sql</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="classification">
+  <h3>classification<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#classification</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#comment">
+  <h3>comment<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#comment</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2000/01/rdf-schema#domain">
+  <h3>domain<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2000/01/rdf-schema#domain</p>
+ </div>
+ <div class="entity" id="hmisElementName">
+  <h3>hmis Element Name<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#hmisElementName</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/identifier">
+  <h3>identifier<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
+ </div>
+ <div class="entity" id="InventoryRecordsCalculationStatus">
+  <h3>Inventory Records Calculation Status<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#InventoryRecordsCalculationStatus</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="InventoryRecords" title="urn:bitfocus:clarity:governance-model#InventoryRecords">Inventory Records</a> <sup class="type-ep" title="external property">ep</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isPartOfScreen">
+  <h3>is Part Of Screen<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#isPartOfScreen</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/language">
+  <h3>language<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/language</p>
+ </div>
+ <div class="entity" id="looker">
+  <h3>looker<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#looker</p>
+ </div>
+ <div class="entity" id="ManualInventoryRefBedType">
+  <h3>Manual Inventory Ref Bed Type<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#ManualInventoryRefBedType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="ManualInventory" title="urn:bitfocus:clarity:governance-model#ManualInventory">Manual Inventory</a> <sup class="type-ep" title="external property">ep</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="modelSet">
+  <h3>model Set<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#modelSet</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#notation">
+  <h3>notation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#notation</p>
+ </div>
+ <div class="entity" id="OutreachEvents">
+  <h3>Outreach Events<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#OutreachEvents</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="OutreachSettingEvents" title="urn:bitfocus:clarity:governance-model#OutreachSettingEvents">Outreach Setting Events</a> <sup class="type-ep" title="external property">ep</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sql">
+  <h3>sql<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#sql</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#FosterCareHomeOrFosterCareGroupHome_215" title="urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215">Foster care home or foster care group home</a></li>
+  <li><a href="#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206" title="urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206">Hospital or other residential non-psychiatric medical facility</a></li>
+  <li><a href="#JailPrisonOrJuvenileDetentionFacility_207" title="urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207">Jail, prison, or juvenile detention facility</a></li>
+  <li><a href="#PsychiatricHospitalOrOtherPsychiatricFacility_204" title="urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204">Psychiatric hospital or other psychiatric facility</a></li>
+  <li><a href="#SafeHaven_118" title="urn:bitfocus:clarity:governance-model#SafeHaven_118">Safe Haven</a></li>
+  <li><a href="#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302" title="urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302">Transitional housing for homeless persons (including homeless youth)</a></li>
+ </ul>
+ <div class="entity" id="FosterCareHomeOrFosterCareGroupHome_215">
+  <h3>Foster care home or foster care group home<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#FosterCareHomeOrFosterCareGroupHome_215</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">Current Living Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination">Exit Destination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence">Prior Residence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"215"^^<a href="http://www.w3.org/2001/XMLSchema#token" target="_blank" title="http://www.w3.org/2001/XMLSchema#token">token</a> </span>
+   </dd>
+   <dd>
+    <a href="modelSet" title="urn:bitfocus:clarity:governance-model#modelSet">model Set</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"housing-payment"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206">
+  <h3>Hospital or other residential non-psychiatric medical facility<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#HospitalOrOtherResidentialNonpsychiatricMedicalFacility_206</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">Current Living Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination">Exit Destination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence">Prior Residence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"206"^^<a href="http://www.w3.org/2001/XMLSchema#token" target="_blank" title="http://www.w3.org/2001/XMLSchema#token">token</a> </span>
+   </dd>
+   <dd>
+    <a href="modelSet" title="urn:bitfocus:clarity:governance-model#modelSet">model Set</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"housing-payment"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="JailPrisonOrJuvenileDetentionFacility_207">
+  <h3>Jail, prison, or juvenile detention facility<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#JailPrisonOrJuvenileDetentionFacility_207</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">Current Living Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination">Exit Destination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence">Prior Residence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"207"^^<a href="http://www.w3.org/2001/XMLSchema#token" target="_blank" title="http://www.w3.org/2001/XMLSchema#token">token</a> </span>
+   </dd>
+   <dd>
+    <a href="modelSet" title="urn:bitfocus:clarity:governance-model#modelSet">model Set</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"housing-payment"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PsychiatricHospitalOrOtherPsychiatricFacility_204">
+  <h3>Psychiatric hospital or other psychiatric facility<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#PsychiatricHospitalOrOtherPsychiatricFacility_204</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">Current Living Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination">Exit Destination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence">Prior Residence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"204"^^<a href="http://www.w3.org/2001/XMLSchema#token" target="_blank" title="http://www.w3.org/2001/XMLSchema#token">token</a> </span>
+   </dd>
+   <dd>
+    <a href="modelSet" title="urn:bitfocus:clarity:governance-model#modelSet">model Set</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"housing-payment"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SafeHaven_118">
+  <h3>Safe Haven<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#SafeHaven_118</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">Current Living Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination">Exit Destination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence">Prior Residence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"118"^^<a href="http://www.w3.org/2001/XMLSchema#token" target="_blank" title="http://www.w3.org/2001/XMLSchema#token">token</a> </span>
+   </dd>
+   <dd>
+    <a href="modelSet" title="urn:bitfocus:clarity:governance-model#modelSet">model Set</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"housing-payment"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302">
+  <h3>Transitional housing for homeless persons (including homeless youth)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> urn:bitfocus:clarity:governance-model#TransitionalHousingForHomelessPersonsIncludingHomelessYouth_302</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#CurrentLivingSituation" title="urn:bitfocus:clarity:governance-model#CurrentLivingSituation">Current Living Situation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#ExitDestination" title="urn:bitfocus:clarity:governance-model#ExitDestination">Exit Destination</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorResidence" title="urn:bitfocus:clarity:governance-model#PriorResidence">Prior Residence</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"302"^^<a href="http://www.w3.org/2001/XMLSchema#token" target="_blank" title="http://www.w3.org/2001/XMLSchema#token">token</a> </span>
+   </dd>
+   <dd>
+    <a href="modelSet" title="urn:bitfocus:clarity:governance-model#modelSet">model Set</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"housing-payment"</span>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+<sup class="type-ep" title="External Properties">ep</sup>: External Properties
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
